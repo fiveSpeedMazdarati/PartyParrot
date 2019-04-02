@@ -1,3 +1,3 @@
 # PartyParrot
 
-The preeminent party parrot API on the ENTIRE internets
+The preeminent Party Parrot API on the ENTIRE internets
