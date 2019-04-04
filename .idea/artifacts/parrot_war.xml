@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="parrot:war">
+    <output-path>$PROJECT_DIR$/parrot/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>parrot</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="act4.war">
+      <element id="artifact" artifact-name="parrot:war exploded" />
+    </root>
+  </artifact>
+</component>
