@@ -1,0 +1,752 @@
+[
+  {
+    "gif": "parrot.gif",
+    "hd": "hd/parrot.gif",
+    "name": "Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "opensourceparrot.gif",
+    "hd": "hd/opensourceparrot.gif",
+    "name": "Open-source Parrot",
+    "category": "technology"
+  },
+  {
+    "gif": "middleparrot.gif",
+    "hd": "hd/middleparrot.gif",
+    "name": "Middle Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "reverseparrot.gif",
+    "hd": "hd/reverseparrot.gif",
+    "name": "Reverse Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "aussieparrot.gif",
+    "hd": "hd/aussieparrot.gif",
+    "name": "Aussie Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "gothparrot.gif",
+    "name": "Goth Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "oldtimeyparrot.gif",
+    "name": "Old Timey Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "boredparrot.gif",
+    "hd": "hd/boredparrot.gif",
+    "name": "Bored Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "shuffleparrot.gif",
+    "hd": "hd/shuffleparrot.gif",
+    "name": "Shuffle Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "shufflefurtherparrot.gif",
+    "name": "Shuffle Further Parrot",
+    "tip": "Combine with Shuffle Parrot for a conga line!",
+    "category": "traditional"
+  },
+  {
+    "gif": "congaparrot.gif",
+    "hd": "hd/congaparrot.gif",
+    "name": "Conga Line Parrot",
+    "tip": "A self sufficient conga line parrot!",
+    "category": "traditional"
+  },
+  {
+    "gif": "reversecongaparrot.gif",
+    "hd": "hd/reversecongaparrot.gif",
+    "name": "Reverse Conga Line Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "partyparrot.gif",
+    "hd": "hd/partyparrot.gif",
+    "name": "Party Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "sadparrot.gif",
+    "hd": "hd/sadparrot.gif",
+    "name": "Sad Parrot",
+    "tip": "Parrots are entitled to their full range of emotions.",
+    "category": "traditional"
+  },
+  {
+    "gif": "copparrot.gif",
+    "hd": "hd/copparrot.gif",
+    "name": "Cop Parrot",
+    "tip": "Not to be confused with Stripper Parrot!",
+    "category": "traditional"
+  },
+  {
+    "gif": "fastparrot.gif",
+    "hd": "hd/fastparrot.gif",
+    "name": "Fast Parrot",
+    "tip": "Now with 50% more party!",
+    "category": "traditional"
+  },
+  {
+    "gif": "ultrafastparrot.gif",
+    "hd": "hd/ultrafastparrot.gif",
+    "name": "Ultra Fast Parrot",
+    "tip": "Now with 150% more party!",
+    "category": "traditional"
+  },
+  {
+    "gif": "slowparrot.gif",
+    "hd": "hd/slowparrot.gif",
+    "name": "Slow Parrot",
+    "tip": "Web 1.0 all over again!",
+    "category": "technology"
+  },
+  {
+    "gif": "slomoparrot.gif",
+    "name": "Slo-mo Parrot",
+    "tip": "Party in slow motion.",
+    "category": "traditional"
+  },
+  {
+    "hd": "hd/dadparrot.gif",
+    "name": "Dad Parrot",
+    "tip": "Is totally freaking out.",
+    "category": "hip"
+  },
+  {
+    "gif": "dealwithitparrot.gif",
+    "hd": "hd/dealwithitparrot.gif",
+    "name": "Deal With It Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "dealwithitnowparrot.gif",
+    "hd": "hd/dealwithitnowparrot.gif",
+    "name": "Deal With It Now Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "fiestaparrot.gif",
+    "name": "Fiesta Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "pizzaparrot.gif",
+    "name": "🍕 Parrot",
+    "category": "food"
+  },
+  {
+    "gif": "hamburgerparrot.gif",
+    "name": "🍔 Parrot",
+    "category": "food"
+  },
+  {
+    "gif": "bananaparrot.gif",
+    "name": "🍌 Parrot",
+    "category": "food"
+  },
+  {
+    "gif": "chillparrot.gif",
+    "name": "Chill Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "explodyparrot.gif",
+    "name": "Explody Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "shufflepartyparrot.gif",
+    "name": "Shuffle Party Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "icecreamparrot.gif",
+    "name": "Ice-Cream Parrot",
+    "category": "food"
+  },
+  {
+    "gif": "sassyparrot.gif",
+    "hd": "hd/sassyparrot.gif",
+    "name": "Sassy Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "confusedparrot.gif",
+    "hd": "hd/confusedparrot.gif",
+    "name": "Confused Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "aussiecongaparrot.gif",
+    "hd": "hd/aussiecongaparrot.gif",
+    "name": "Aussie Conga Line Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "aussiereversecongaparrot.gif",
+    "hd": "hd/aussiereversecongaparrot.gif",
+    "name": "Aussie Reverse Conga Line Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "wave1parrot.gif",
+    "name": "Parrot Wave (1)",
+    "category": "traditional"
+  },
+  {
+    "gif": "wave2parrot.gif",
+    "name": "Parrot Wave (2)",
+    "category": "traditional"
+  },
+  {
+    "gif": "wave3parrot.gif",
+    "name": "Parrot Wave (3)",
+    "category": "traditional"
+  },
+  {
+    "gif": "wave4parrot.gif",
+    "name": "Parrot Wave (4)",
+    "category": "traditional"
+  },
+  {
+    "gif": "wave5parrot.gif",
+    "name": "Parrot Wave (5)",
+    "category": "traditional"
+  },
+  {
+    "gif": "wave6parrot.gif",
+    "name": "Parrot Wave (6)",
+    "category": "traditional"
+  },
+  {
+    "gif": "wave7parrot.gif",
+    "name": "Parrot Wave (7)",
+    "category": "traditional"
+  },
+  {
+    "gif": "wave8parrot.gif",
+    "name": "Parrot Wave (8)",
+    "category": "traditional"
+  },
+  {
+    "gif": "wave9parrot.gif",
+    "name": "Parrot Wave (9)",
+    "category": "traditional"
+  },
+  {
+    "gif": "congapartyparrot.gif",
+    "hd": "hd/congapartyparrot.gif",
+    "name": "Conga Party Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "moonwalkingparrot.gif",
+    "hd": "hd/moonwalkingparrot.gif",
+    "name": "Moonwalking Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "thumbsupparrot.gif",
+    "hd": "hd/thumbsupparrot.gif",
+    "name": "Thumbs Up Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "coffeeparrot.gif",
+    "name": "Coffee Parrot",
+    "category": "food"
+  },
+  {
+    "gif": "mustacheparrot.gif",
+    "hd": "hd/mustacheparrot.gif",
+    "name": "Parrot with mustache",
+    "category": "hip"
+  },
+  {
+    "gif": "christmasparrot.gif",
+    "hd": "hd/christmasparrot.gif",
+    "name": "Christmas Parrot",
+    "category": "holiday"
+  },
+  {
+    "gif": "sleepingparrot.gif",
+    "hd": "hd/sleepingparrot.gif",
+    "name": "Sleepy Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "beerparrot.gif",
+    "hd": "hd/beerparrot.gif",
+    "name": "Happy Hour Parrot",
+    "category": "food"
+  },
+  {
+    "gif": "darkbeerparrot.gif",
+    "name": "Dark Beer Parrot",
+    "category": "food"
+  },
+  {
+    "gif": "blondesassyparrot.gif",
+    "name": "Blonde Sassy Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "bluescluesparrot.gif",
+    "name": "Blues Clues Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "gentlemanparrot.gif",
+    "hd": "hd/gentlemanparrot.gif",
+    "name": "Gentleman Parrot",
+    "tip": "A true gentleman parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "margaritaparrot.gif",
+    "name": "Margarita Parrot",
+    "tip": "Fiesta Parrot is getting his drink on, margarita style!",
+    "category": "food"
+  },
+  {
+    "gif": "dreidelparrot.gif",
+    "name": "Dreidel Parrot",
+    "tip": "Happy Hanukkah!",
+    "category": "holiday"
+  },
+  {
+    "gif": "harrypotterparrot.gif",
+    "name": "Harry Potter Parrot",
+    "tip": "You're a parrot-wizard Harry!",
+    "category": "hip"
+  },
+  {
+    "gif": "upvoteparrot.gif",
+    "name": "Upvote Parrot",
+    "category": "technology"
+  },
+  {
+    "gif": "twinsparrot.gif",
+    "hd": "hd/twinsparrot.gif",
+    "name": "Twins Parrot",
+    "tip": "parrot + parrot = great party!",
+    "category": "traditional"
+  },
+  {
+    "gif": "tripletsparrot.gif",
+    "name": "Triplets Parrot",
+    "tip": "parrot + parrot + parrot = magnificent party!!!!",
+    "category": "traditional"
+  },
+  {
+    "gif": "stableparrot.gif",
+    "hd": "hd/stableparrot.gif",
+    "name": "Stable Parrot",
+    "tip": "Gyrostablization Mode Initiated",
+    "category": "traditional"
+  },
+  {
+    "gif": "shipitparrot.gif",
+    "name": "Ship It Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "skiparrot.gif",
+    "name": "Ski Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "loveparrot.gif",
+    "name": "Love Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "halalparrot.gif",
+    "name": "Halal Parrot",
+    "category": "food"
+  },
+  {
+    "hd": "hd/wendyparrot.gif",
+    "name": "Wendy's Parrot",
+    "tip": "BACONATOR OR DIE!",
+    "category": "food"
+  },
+  {
+    "hd": "hd/popcornparrot.gif",
+    "name": "Popcorn Parrot",
+    "category": "food"
+  },
+  {
+    "hd": "hd/donutparrot.gif",
+    "name": "Donut Parrot",
+    "category": "food"
+  },
+  {
+    "hd": "hd/evilparrot.gif",
+    "name": "Evil Parrot",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/discoparrot.gif",
+    "name": "Disco Parrot",
+    "tip": "1970s Party Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "matrixparrot.gif",
+    "name": "Matrix Parrot",
+    "tip": "This Parrot took the Red Pill",
+    "category": "hip"
+  },
+  {
+    "gif": "papalparrot.gif",
+    "name": "Papal Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "stalkerparrot.gif",
+    "name": "Stalker Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "scienceparrot.gif",
+    "hd": "hd/scienceparrot.gif",
+    "name": "Science Parrot",
+    "category": "technology"
+  },
+  {
+    "hd": "hd/revolutionparrot.gif",
+    "name": "Revolution Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "fidgetparrot.gif",
+    "name": "Fidget Spinner Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "beretparrot.gif",
+    "hd": "hd/beretparrot.gif",
+    "name": "Beret Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "tacoparrot.gif",
+    "name": "Taco Parrot",
+    "category": "food"
+  },
+  {
+    "gif": "ryangoslingparrot.gif",
+    "name": "Ryan Gosling Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "luckyparrot.gif",
+    "name": "Lucky Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "birthdaypartyparrot.gif",
+    "hd": "hd/birthdaypartyparrot.gif",
+    "name": "Birthday Party Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "jediparrot.gif",
+    "hd": "hd/jediparrot.gif",
+    "name": "Jedi Parrot",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/sithparrot.gif",
+    "name": "Sith Parrot",
+    "tip": "Feel the power of the darkside",
+    "category": "hip"
+  },
+  {
+    "gif": "angryparrot.gif",
+    "hd": "hd/angryparrot.gif",
+    "name": "Angry Parrot",
+    "category": "traditional"
+  },
+  {
+    "hd": "hd/invisibleparrot.gif",
+    "name": "Invisible Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "rotatingparrot.gif",
+    "name": "Rotating Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "cryptoparrot.gif",
+    "name": "Crypto Parrot",
+    "category": "technology"
+  },
+  {
+    "hd": "hd/sushiparrot.gif",
+    "name": "Sushi Parrot",
+    "category": "food"
+  },
+  {
+    "hd": "hd/pumpkinparrot.gif",
+    "name": "Pumpkin Parrot",
+    "category": "holiday"
+  },
+  {
+    "gif": "angelparrot.gif",
+    "hd": "hd/angelparrot.gif",
+    "name": "Angel Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "bluntparrot.gif",
+    "hd": "hd/bluntparrot.gif",
+    "name": "Blunt Parrot",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/sintparrot.gif",
+    "name": "Sinterklaas Parrot",
+    "category": "holiday"
+  },
+  {
+    "hd": "hd/pirateparrot.gif",
+    "name": "Pirate Parrot",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/ceilingparrot.gif",
+    "gif": "ceilingparrot.gif",
+    "name": "Ceiling Parrot",
+    "category": "traditional"
+  },
+  {
+    "hd": "hd/mardigrasparrot.gif",
+    "name": "Mardi Gras Parrot",
+    "tip": "Laissez les bons temps rouler!",
+    "category": "holiday"
+  },
+  {
+    "gif": "sovjetparrot.gif",
+    "name": "Soviet Parrot",
+    "tip": "даваи даваи!",
+    "category": "hip"
+
+  },
+  {
+    "gif": "portalparrot.gif",
+    "name": "Portal Parrot",
+    "tip": "The cake is a lie.",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/hardhatparrot.gif",
+    "name": "Hard Hat Parrot",
+    "tip": "[Under Construction]",
+    "category": "traditional"
+  },
+  {
+    "hd": "hd/flyingmoneyparrot.gif",
+    "name": "Flying Money Parrot",
+    "tip": "The money is flying away!",
+    "category": "traditional"
+  },
+  {
+    "hd": "hd/portalorangeparrot.gif",
+    "name": "Portal Parrot (Orange Portal)",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/portalblueparrot.gif",
+    "name": "Portal Parrot (Blue Portal)",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/bunnyparrot.gif",
+    "name": "Bunny Parrot",
+    "tip": "Real men love bunnies",
+    "category": "holiday"
+  },
+  {
+    "hd": "hd/norwegianblueparrot.gif",
+    "name": "Norwegian Blue Parrot",
+    "tip": "Remarkable bird, the Norwegian Blue, idn'it, ay?",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/transparront.gif",
+    "name": "Transparront",
+    "category": "hip"
+  },
+  {
+    "gif": "fixparrot.gif",
+    "name": "Fix Parrot",
+    "category": "traditional"
+  },
+  {
+    "hd": "hd/brazilianplayerparrot.gif",
+    "name": "Brazilian Player Parrot",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/brazilianfanparrot.gif",
+    "name": "Brazilian Fan Parrot",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/spyparrot.gif",
+    "name": "Spy Parrot",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/marshmallowparrot.gif",
+    "name": "Marshmallow Parrot",
+    "category": "food"
+  },
+  {
+    "hd": "hd/whitewalkerparrot.gif",
+    "name": "White Walker Parrot",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/calvinist_parrot.gif",
+    "name": "Calvinist Parrot",
+    "category": "hip"
+  },
+  {
+    "gif":"frenchparrot.gif",
+    "hd":"hd/frenchparrot.gif",
+    "name":"French Parrot",
+    "tip":"Oulala",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/githubparrot.gif",
+    "name": "Github Party Parrot",
+    "tip": "Github PR Party",
+    "category": "technology"
+  },
+  {
+    "gif": "bootlegparrot.gif",
+    "hd": "hd/bootlegparrot.gif",
+    "name": "Bootleg Parrot",
+    "category": "traditional"
+  },
+  {
+    "gif": "bikerparrot.gif",
+    "hd": "hd/bikerparrot.gif",
+    "name": "Biker Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "inverseparrot.gif",
+    "hd": "hd/inverseparrot.gif",
+    "name": "Inverse Parrot",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/pingpongparrot.gif",
+    "name": "Ping Pong Parrot",
+    "category": "traditional"
+  },
+  {
+    "hd": "hd/laptop_parrot.gif",
+    "name": "Laptop Parrot",
+    "category": "technology"
+  },
+  {
+    "hd": "hd/60fpsparrot.gif",
+    "name": "60fps Parrot",
+    "category": "traditional"
+  },
+  {
+    "hd": "hd/redhatparrot.gif",
+    "name": "Red Hat Parrot",
+    "tip": "Soon to be IBM parrot...",
+    "category": "traditional"
+  },
+  {
+    "hd": "hd/footballparrot.gif",
+    "name": "Football Parrot",
+    "category": "traditional"
+  },
+  {
+    "hd": "hd/flowerparrot.gif",
+    "name": "Flower Parrot",
+    "category": "traditional"
+  },
+  {
+    "hd": "hd/parrotnotfound.gif",
+    "name": "Parrot Not Found",
+    "category": "technology"
+  },
+  {
+    "hd": "hd/spinningparrot.gif",
+    "name": "Spinning Parrot",
+    "category": "traditional"
+  },
+  {
+    "hd": "hd/redenvelopeparrot.gif",
+    "name": "Red Envelope Parrot",
+    "tip": "Happy Lunar New Year!",
+    "category": "holiday"
+  },
+  {
+    "hd": "hd/grouchoparrot.gif",
+    "name": "Groucho Parrot",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/chicoparrot.gif",
+    "name": "Chico Parrot",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/harpoparrot.gif",
+    "name": "Harpo Parrot",
+    "category": "hip"
+  },
+  {
+    "gif": "schnitzelparrot.gif",
+    "name": "Schnitzel Parrot",
+    "category": "food"
+  },
+  {
+    "hd": "hd/vikingparrot.gif",
+    "name": "Viking Parrot",
+    "category": "traditional"
+  },
+  {
+    "hd": "hd/darkmodeparrot.gif",
+    "name": "Dark Mode Parrot",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/tiedyeparrot.gif",
+    "name": "Tie Dye Parrot",
+    "category": "hip"
+  },
+  {
+    "hd": "hd/horizontalparrot.gif",
+    "name": "Horizontal Parrot",
+    "category": "traditional"
+  },
+  {
+    "hd": "hd/sherlockholmesparrot.gif",
+    "name": "Sherlock Parrot",
+    "category": "traditional"
+  }
+]
