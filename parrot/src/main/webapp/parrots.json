@@ -54,15 +54,13 @@
   {
     "gif": "shufflefurtherparrot.gif",
     "name": "Shuffle Further Parrot",
-    "tip": "Combine with Shuffle Parrot for a conga line!",
     "category": "traditional"
   },
   {
     "gif": "congaparrot.gif",
     "hd": "hd/congaparrot.gif",
     "name": "Conga Line Parrot",
-    "tip": "A self sufficient conga line parrot!",
-    "category": "traditional"
+     "category": "traditional"
   },
   {
     "gif": "reversecongaparrot.gif",
@@ -80,47 +78,40 @@
     "gif": "sadparrot.gif",
     "hd": "hd/sadparrot.gif",
     "name": "Sad Parrot",
-    "tip": "Parrots are entitled to their full range of emotions.",
     "category": "traditional"
   },
   {
     "gif": "copparrot.gif",
     "hd": "hd/copparrot.gif",
     "name": "Cop Parrot",
-    "tip": "Not to be confused with Stripper Parrot!",
     "category": "traditional"
   },
   {
     "gif": "fastparrot.gif",
     "hd": "hd/fastparrot.gif",
     "name": "Fast Parrot",
-    "tip": "Now with 50% more party!",
     "category": "traditional"
   },
   {
     "gif": "ultrafastparrot.gif",
     "hd": "hd/ultrafastparrot.gif",
     "name": "Ultra Fast Parrot",
-    "tip": "Now with 150% more party!",
     "category": "traditional"
   },
   {
     "gif": "slowparrot.gif",
     "hd": "hd/slowparrot.gif",
     "name": "Slow Parrot",
-    "tip": "Web 1.0 all over again!",
     "category": "technology"
   },
   {
     "gif": "slomoparrot.gif",
     "name": "Slo-mo Parrot",
-    "tip": "Party in slow motion.",
     "category": "traditional"
   },
   {
     "hd": "hd/dadparrot.gif",
     "name": "Dad Parrot",
-    "tip": "Is totally freaking out.",
     "category": "hip"
   },
   {
@@ -310,25 +301,21 @@
     "gif": "gentlemanparrot.gif",
     "hd": "hd/gentlemanparrot.gif",
     "name": "Gentleman Parrot",
-    "tip": "A true gentleman parrot",
     "category": "hip"
   },
   {
     "gif": "margaritaparrot.gif",
     "name": "Margarita Parrot",
-    "tip": "Fiesta Parrot is getting his drink on, margarita style!",
     "category": "food"
   },
   {
     "gif": "dreidelparrot.gif",
     "name": "Dreidel Parrot",
-    "tip": "Happy Hanukkah!",
     "category": "holiday"
   },
   {
     "gif": "harrypotterparrot.gif",
     "name": "Harry Potter Parrot",
-    "tip": "You're a parrot-wizard Harry!",
     "category": "hip"
   },
   {
@@ -340,20 +327,17 @@
     "gif": "twinsparrot.gif",
     "hd": "hd/twinsparrot.gif",
     "name": "Twins Parrot",
-    "tip": "parrot + parrot = great party!",
     "category": "traditional"
   },
   {
     "gif": "tripletsparrot.gif",
     "name": "Triplets Parrot",
-    "tip": "parrot + parrot + parrot = magnificent party!!!!",
     "category": "traditional"
   },
   {
     "gif": "stableparrot.gif",
     "hd": "hd/stableparrot.gif",
     "name": "Stable Parrot",
-    "tip": "Gyrostablization Mode Initiated",
     "category": "traditional"
   },
   {
@@ -379,7 +363,6 @@
   {
     "hd": "hd/wendyparrot.gif",
     "name": "Wendy's Parrot",
-    "tip": "BACONATOR OR DIE!",
     "category": "food"
   },
   {
@@ -400,13 +383,11 @@
   {
     "hd": "hd/discoparrot.gif",
     "name": "Disco Parrot",
-    "tip": "1970s Party Parrot",
     "category": "traditional"
   },
   {
     "gif": "matrixparrot.gif",
     "name": "Matrix Parrot",
-    "tip": "This Parrot took the Red Pill",
     "category": "hip"
   },
   {
@@ -471,7 +452,6 @@
   {
     "hd": "hd/sithparrot.gif",
     "name": "Sith Parrot",
-    "tip": "Feel the power of the darkside",
     "category": "hip"
   },
   {
@@ -536,32 +516,27 @@
   {
     "hd": "hd/mardigrasparrot.gif",
     "name": "Mardi Gras Parrot",
-    "tip": "Laissez les bons temps rouler!",
     "category": "holiday"
   },
   {
     "gif": "sovjetparrot.gif",
     "name": "Soviet Parrot",
-    "tip": "даваи даваи!",
     "category": "hip"
 
   },
   {
     "gif": "portalparrot.gif",
     "name": "Portal Parrot",
-    "tip": "The cake is a lie.",
     "category": "hip"
   },
   {
     "hd": "hd/hardhatparrot.gif",
     "name": "Hard Hat Parrot",
-    "tip": "[Under Construction]",
     "category": "traditional"
   },
   {
     "hd": "hd/flyingmoneyparrot.gif",
     "name": "Flying Money Parrot",
-    "tip": "The money is flying away!",
     "category": "traditional"
   },
   {
@@ -577,13 +552,11 @@
   {
     "hd": "hd/bunnyparrot.gif",
     "name": "Bunny Parrot",
-    "tip": "Real men love bunnies",
     "category": "holiday"
   },
   {
     "hd": "hd/norwegianblueparrot.gif",
     "name": "Norwegian Blue Parrot",
-    "tip": "Remarkable bird, the Norwegian Blue, idn'it, ay?",
     "category": "hip"
   },
   {
@@ -630,13 +603,11 @@
     "gif":"frenchparrot.gif",
     "hd":"hd/frenchparrot.gif",
     "name":"French Parrot",
-    "tip":"Oulala",
     "category": "hip"
   },
   {
     "hd": "hd/githubparrot.gif",
     "name": "Github Party Parrot",
-    "tip": "Github PR Party",
     "category": "technology"
   },
   {
@@ -675,7 +646,6 @@
   {
     "hd": "hd/redhatparrot.gif",
     "name": "Red Hat Parrot",
-    "tip": "Soon to be IBM parrot...",
     "category": "traditional"
   },
   {
@@ -701,7 +671,6 @@
   {
     "hd": "hd/redenvelopeparrot.gif",
     "name": "Red Envelope Parrot",
-    "tip": "Happy Lunar New Year!",
     "category": "holiday"
   },
   {
