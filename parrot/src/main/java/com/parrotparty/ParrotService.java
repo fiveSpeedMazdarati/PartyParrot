@@ -60,6 +60,8 @@ public class ParrotService {
     @Produces("application/json")
     public void getJSONForParrot() {
         // TODO: change return type to Response
+        // Heidi will finish this
+        // %20 = space
     }
 
     @GET
@@ -67,7 +69,7 @@ public class ParrotService {
     @Produces("application/json")
     public void getCategories() {
         // TODO: change return type to Response!
-
+        // A race between Heidi and Luke
     }
 
     @GET
@@ -75,11 +77,14 @@ public class ParrotService {
     @Produces("application/json")
     public void getJSONForParrotsByCategory() {
         // TODO: change return type to Response
+        // This one's for Kelly
     }
 
     @POST
     // The Java method will add content to the collection of parrots
     public void createParrot() {
+
+        // Luke will finish this method
 
     }
 
