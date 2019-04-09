@@ -25,3 +25,5 @@
 - Divvy up who presents what
 - 3rd update - time log/journal entries documenting progress, obstacles, findings, learning points (show who did what).
 
+![Kitty](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
