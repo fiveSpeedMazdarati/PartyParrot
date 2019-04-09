@@ -42,6 +42,9 @@ database.properties
 ## File-based project format:
 *.iws
 
+# properties files
+*.properties
+
 ## Plugin-specific files:
 
 # IntelliJ
