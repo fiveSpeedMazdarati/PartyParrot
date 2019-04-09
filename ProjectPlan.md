@@ -4,18 +4,16 @@
 - X -- Problem statement
 - X -- Project objectives
 - Project plan
-- Edit JSON file to add categories
-- Decide how to store information - database or JSON?
-- Individually complete week 9 activities (a volunteer may try this in the project).
-- Plan week 2
+- X -- Edit JSON file to add categories
+- X --Decide how to store information - database or JSON?
+- X --Individually complete week 9 activities (a volunteer may try this in the project).
+- X --Plan week 2
 - 1st update - time log/journal entries documenting progress, obstacles, findings, learning points (show who did what).
 
 ## By 4/15
-
-
-
+- Complete the 4 methods for the service
+- Refactor in class if not before
 - 2nd update - time log/journal entries documenting progress, obstacles, findings, learning points (show who did what).
-
 
 ## By 4/22 (Presentation Day)
 - Final source code pushed to GitHub
