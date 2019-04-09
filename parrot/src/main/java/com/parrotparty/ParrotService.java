@@ -8,10 +8,8 @@ import org.apache.logging.log4j.Logger;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
@@ -33,10 +31,10 @@ public class ParrotService {
 
             // Convert JSON string from file to Object
             //might not need [] when returning single result?
-            Results[] result = mapper.readValue(new URL("http://localhost:8080/parrots.json"), Results[].class);
+            Parrot[] result = mapper.readValue(new URL("http://localhost:8080/parrots.json"), Parrot[].class);
 
             //could also use file but I couldn't get relative path out of it
-            //Results[] result = mapper.readValue(new File("/home/klyke/student/PartyParrot/parrot/src/main/webapp/parrots.json"), Results[].class);
+            //Parrot[] result = mapper.readValue(new File("/home/klyke/student/PartyParrot/parrot/src/main/webapp/parrots.json"), Parrot[].class);
             results = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(result);
 
             logger.info(result);

@@ -4,13 +4,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.annotation.Generated;
 
 @Generated("com.robohorse.robopojogenerator")
-public class Results{
+public class Parrot {
 
-	public Results() {
+	public Parrot() {
 
 	}
 
-	public Results(String name, String gif, String hd, String category) {
+	public Parrot(String name, String gif, String hd, String category) {
 		this.name = name;
 		this.gif = gif;
 		this.hd = hd;
@@ -64,7 +64,7 @@ public class Results{
 	@Override
  	public String toString(){
 		return 
-			"Results{" + 
+			"Parrot{" +
 			"gif = '" + gif + '\'' + 
 			",name = '" + name + '\'' + 
 			",hd = '" + hd + '\'' + 
