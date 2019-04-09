@@ -1,720 +1,720 @@
 [
   {
-    "gif": "parrot.gif",
-    "hd": "hd/parrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/parrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/parrot.gif",
     "name": "Parrot",
     "category": "traditional"
   },
   {
-    "gif": "opensourceparrot.gif",
-    "hd": "hd/opensourceparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/opensourceparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/opensourceparrot.gif",
     "name": "Open-source Parrot",
     "category": "technology"
   },
   {
-    "gif": "middleparrot.gif",
-    "hd": "hd/middleparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/middleparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/middleparrot.gif",
     "name": "Middle Parrot",
     "category": "traditional"
   },
   {
-    "gif": "reverseparrot.gif",
-    "hd": "hd/reverseparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/reverseparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/reverseparrot.gif",
     "name": "Reverse Parrot",
     "category": "traditional"
   },
   {
-    "gif": "aussieparrot.gif",
-    "hd": "hd/aussieparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/aussieparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/aussieparrot.gif",
     "name": "Aussie Parrot",
     "category": "traditional"
   },
   {
-    "gif": "gothparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/gothparrot.gif",
     "name": "Goth Parrot",
     "category": "hip"
   },
   {
-    "gif": "oldtimeyparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/oldtimeyparrot.gif",
     "name": "Old Timey Parrot",
     "category": "hip"
   },
   {
-    "gif": "boredparrot.gif",
-    "hd": "hd/boredparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/boredparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/boredparrot.gif",
     "name": "Bored Parrot",
     "category": "traditional"
   },
   {
-    "gif": "shuffleparrot.gif",
-    "hd": "hd/shuffleparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/shuffleparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/shuffleparrot.gif",
     "name": "Shuffle Parrot",
     "category": "traditional"
   },
   {
-    "gif": "shufflefurtherparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/shufflefurtherparrot.gif",
     "name": "Shuffle Further Parrot",
     "category": "traditional"
   },
   {
-    "gif": "congaparrot.gif",
-    "hd": "hd/congaparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/congaparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/congaparrot.gif",
     "name": "Conga Line Parrot",
      "category": "traditional"
   },
   {
-    "gif": "reversecongaparrot.gif",
-    "hd": "hd/reversecongaparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/reversecongaparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/reversecongaparrot.gif",
     "name": "Reverse Conga Line Parrot",
     "category": "traditional"
   },
   {
-    "gif": "partyparrot.gif",
-    "hd": "hd/partyparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/partyparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/partyparrot.gif",
     "name": "Party Parrot",
     "category": "traditional"
   },
   {
-    "gif": "sadparrot.gif",
-    "hd": "hd/sadparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/sadparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/sadparrot.gif",
     "name": "Sad Parrot",
     "category": "traditional"
   },
   {
-    "gif": "copparrot.gif",
-    "hd": "hd/copparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/copparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/copparrot.gif",
     "name": "Cop Parrot",
     "category": "traditional"
   },
   {
-    "gif": "fastparrot.gif",
-    "hd": "hd/fastparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/fastparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/fastparrot.gif",
     "name": "Fast Parrot",
     "category": "traditional"
   },
   {
-    "gif": "ultrafastparrot.gif",
-    "hd": "hd/ultrafastparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/ultrafastparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/ultrafastparrot.gif",
     "name": "Ultra Fast Parrot",
     "category": "traditional"
   },
   {
-    "gif": "slowparrot.gif",
-    "hd": "hd/slowparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/slowparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/slowparrot.gif",
     "name": "Slow Parrot",
     "category": "technology"
   },
   {
-    "gif": "slomoparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/slomoparrot.gif",
     "name": "Slo-mo Parrot",
     "category": "traditional"
   },
   {
-    "hd": "hd/dadparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/dadparrot.gif",
     "name": "Dad Parrot",
     "category": "hip"
   },
   {
-    "gif": "dealwithitparrot.gif",
-    "hd": "hd/dealwithitparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/dealwithitparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/dealwithitparrot.gif",
     "name": "Deal With It Parrot",
     "category": "hip"
   },
   {
-    "gif": "dealwithitnowparrot.gif",
-    "hd": "hd/dealwithitnowparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/dealwithitnowparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/dealwithitnowparrot.gif",
     "name": "Deal With It Now Parrot",
     "category": "hip"
   },
   {
-    "gif": "fiestaparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/fiestaparrot.gif",
     "name": "Fiesta Parrot",
     "category": "traditional"
   },
   {
-    "gif": "pizzaparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/pizzaparrot.gif",
     "name": "🍕 Parrot",
     "category": "food"
   },
   {
-    "gif": "hamburgerparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/hamburgerparrot.gif",
     "name": "🍔 Parrot",
     "category": "food"
   },
   {
-    "gif": "bananaparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/bananaparrot.gif",
     "name": "🍌 Parrot",
     "category": "food"
   },
   {
-    "gif": "chillparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/chillparrot.gif",
     "name": "Chill Parrot",
     "category": "hip"
   },
   {
-    "gif": "explodyparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/explodyparrot.gif",
     "name": "Explody Parrot",
     "category": "hip"
   },
   {
-    "gif": "shufflepartyparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/shufflepartyparrot.gif",
     "name": "Shuffle Party Parrot",
     "category": "traditional"
   },
   {
-    "gif": "icecreamparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/icecreamparrot.gif",
     "name": "Ice-Cream Parrot",
     "category": "food"
   },
   {
-    "gif": "sassyparrot.gif",
-    "hd": "hd/sassyparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/sassyparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/sassyparrot.gif",
     "name": "Sassy Parrot",
     "category": "traditional"
   },
   {
-    "gif": "confusedparrot.gif",
-    "hd": "hd/confusedparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/confusedparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/confusedparrot.gif",
     "name": "Confused Parrot",
     "category": "hip"
   },
   {
-    "gif": "aussiecongaparrot.gif",
-    "hd": "hd/aussiecongaparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/aussiecongaparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/aussiecongaparrot.gif",
     "name": "Aussie Conga Line Parrot",
     "category": "traditional"
   },
   {
-    "gif": "aussiereversecongaparrot.gif",
-    "hd": "hd/aussiereversecongaparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/aussiereversecongaparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/aussiereversecongaparrot.gif",
     "name": "Aussie Reverse Conga Line Parrot",
     "category": "traditional"
   },
   {
-    "gif": "wave1parrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/wave1parrot.gif",
     "name": "Parrot Wave (1)",
     "category": "traditional"
   },
   {
-    "gif": "wave2parrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/wave2parrot.gif",
     "name": "Parrot Wave (2)",
     "category": "traditional"
   },
   {
-    "gif": "wave3parrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/wave3parrot.gif",
     "name": "Parrot Wave (3)",
     "category": "traditional"
   },
   {
-    "gif": "wave4parrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/wave4parrot.gif",
     "name": "Parrot Wave (4)",
     "category": "traditional"
   },
   {
-    "gif": "wave5parrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/wave5parrot.gif",
     "name": "Parrot Wave (5)",
     "category": "traditional"
   },
   {
-    "gif": "wave6parrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/wave6parrot.gif",
     "name": "Parrot Wave (6)",
     "category": "traditional"
   },
   {
-    "gif": "wave7parrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/wave7parrot.gif",
     "name": "Parrot Wave (7)",
     "category": "traditional"
   },
   {
-    "gif": "wave8parrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/wave8parrot.gif",
     "name": "Parrot Wave (8)",
     "category": "traditional"
   },
   {
-    "gif": "wave9parrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/wave9parrot.gif",
     "name": "Parrot Wave (9)",
     "category": "traditional"
   },
   {
-    "gif": "congapartyparrot.gif",
-    "hd": "hd/congapartyparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/congapartyparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/congapartyparrot.gif",
     "name": "Conga Party Parrot",
     "category": "traditional"
   },
   {
-    "gif": "moonwalkingparrot.gif",
-    "hd": "hd/moonwalkingparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/moonwalkingparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/moonwalkingparrot.gif",
     "name": "Moonwalking Parrot",
     "category": "traditional"
   },
   {
-    "gif": "thumbsupparrot.gif",
-    "hd": "hd/thumbsupparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/thumbsupparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/thumbsupparrot.gif",
     "name": "Thumbs Up Parrot",
     "category": "hip"
   },
   {
-    "gif": "coffeeparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/coffeeparrot.gif",
     "name": "Coffee Parrot",
     "category": "food"
   },
   {
-    "gif": "mustacheparrot.gif",
-    "hd": "hd/mustacheparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/mustacheparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/mustacheparrot.gif",
     "name": "Parrot with mustache",
     "category": "hip"
   },
   {
-    "gif": "christmasparrot.gif",
-    "hd": "hd/christmasparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/christmasparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/christmasparrot.gif",
     "name": "Christmas Parrot",
     "category": "holiday"
   },
   {
-    "gif": "sleepingparrot.gif",
-    "hd": "hd/sleepingparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/sleepingparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/sleepingparrot.gif",
     "name": "Sleepy Parrot",
     "category": "traditional"
   },
   {
-    "gif": "beerparrot.gif",
-    "hd": "hd/beerparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/beerparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/beerparrot.gif",
     "name": "Happy Hour Parrot",
     "category": "food"
   },
   {
-    "gif": "darkbeerparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/darkbeerparrot.gif",
     "name": "Dark Beer Parrot",
     "category": "food"
   },
   {
-    "gif": "blondesassyparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/blondesassyparrot.gif",
     "name": "Blonde Sassy Parrot",
     "category": "hip"
   },
   {
-    "gif": "bluescluesparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/bluescluesparrot.gif",
     "name": "Blues Clues Parrot",
     "category": "hip"
   },
   {
-    "gif": "gentlemanparrot.gif",
-    "hd": "hd/gentlemanparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/gentlemanparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/gentlemanparrot.gif",
     "name": "Gentleman Parrot",
     "category": "hip"
   },
   {
-    "gif": "margaritaparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/margaritaparrot.gif",
     "name": "Margarita Parrot",
     "category": "food"
   },
   {
-    "gif": "dreidelparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/dreidelparrot.gif",
     "name": "Dreidel Parrot",
     "category": "holiday"
   },
   {
-    "gif": "harrypotterparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/harrypotterparrot.gif",
     "name": "Harry Potter Parrot",
     "category": "hip"
   },
   {
-    "gif": "upvoteparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/upvoteparrot.gif",
     "name": "Upvote Parrot",
     "category": "technology"
   },
   {
-    "gif": "twinsparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/twinsparrot.gif",
     "hd": "hd/twinsparrot.gif",
     "name": "Twins Parrot",
     "category": "traditional"
   },
   {
-    "gif": "tripletsparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/tripletsparrot.gif",
     "name": "Triplets Parrot",
     "category": "traditional"
   },
   {
-    "gif": "stableparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/stableparrot.gif",
     "hd": "hd/stableparrot.gif",
     "name": "Stable Parrot",
     "category": "traditional"
   },
   {
-    "gif": "shipitparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/shipitparrot.gif",
     "name": "Ship It Parrot",
     "category": "hip"
   },
   {
-    "gif": "skiparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/skiparrot.gif",
     "name": "Ski Parrot",
     "category": "hip"
   },
   {
-    "gif": "loveparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/loveparrot.gif",
     "name": "Love Parrot",
     "category": "traditional"
   },
   {
-    "gif": "halalparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/halalparrot.gif",
     "name": "Halal Parrot",
     "category": "food"
   },
   {
-    "hd": "hd/wendyparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/wendyparrot.gif",
     "name": "Wendy's Parrot",
     "category": "food"
   },
   {
-    "hd": "hd/popcornparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/popcornparrot.gif",
     "name": "Popcorn Parrot",
     "category": "food"
   },
   {
-    "hd": "hd/donutparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/donutparrot.gif",
     "name": "Donut Parrot",
     "category": "food"
   },
   {
-    "hd": "hd/evilparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/evilparrot.gif",
     "name": "Evil Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/discoparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/discoparrot.gif",
     "name": "Disco Parrot",
     "category": "traditional"
   },
   {
-    "gif": "matrixparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/matrixparrot.gif",
     "name": "Matrix Parrot",
     "category": "hip"
   },
   {
-    "gif": "papalparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/papalparrot.gif",
     "name": "Papal Parrot",
     "category": "traditional"
   },
   {
-    "gif": "stalkerparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/stalkerparrot.gif",
     "name": "Stalker Parrot",
     "category": "hip"
   },
   {
-    "gif": "scienceparrot.gif",
-    "hd": "hd/scienceparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/scienceparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/scienceparrot.gif",
     "name": "Science Parrot",
     "category": "technology"
   },
   {
-    "hd": "hd/revolutionparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/revolutionparrot.gif",
     "name": "Revolution Parrot",
     "category": "hip"
   },
   {
-    "gif": "fidgetparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/fidgetparrot.gif",
     "name": "Fidget Spinner Parrot",
     "category": "hip"
   },
   {
-    "gif": "beretparrot.gif",
-    "hd": "hd/beretparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/beretparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/beretparrot.gif",
     "name": "Beret Parrot",
     "category": "hip"
   },
   {
-    "gif": "tacoparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/tacoparrot.gif",
     "name": "Taco Parrot",
     "category": "food"
   },
   {
-    "gif": "ryangoslingparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/ryangoslingparrot.gif",
     "name": "Ryan Gosling Parrot",
     "category": "hip"
   },
   {
-    "gif": "luckyparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/luckyparrot.gif",
     "name": "Lucky Parrot",
     "category": "traditional"
   },
   {
-    "gif": "birthdaypartyparrot.gif",
-    "hd": "hd/birthdaypartyparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/birthdaypartyparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/birthdaypartyparrot.gif",
     "name": "Birthday Party Parrot",
     "category": "traditional"
   },
   {
-    "gif": "jediparrot.gif",
-    "hd": "hd/jediparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/jediparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/jediparrot.gif",
     "name": "Jedi Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/sithparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/sithparrot.gif",
     "name": "Sith Parrot",
     "category": "hip"
   },
   {
-    "gif": "angryparrot.gif",
-    "hd": "hd/angryparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/angryparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/angryparrot.gif",
     "name": "Angry Parrot",
     "category": "traditional"
   },
   {
-    "hd": "hd/invisibleparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/invisibleparrot.gif",
     "name": "Invisible Parrot",
     "category": "hip"
   },
   {
-    "gif": "rotatingparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/rotatingparrot.gif",
     "name": "Rotating Parrot",
     "category": "traditional"
   },
   {
-    "gif": "cryptoparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/cryptoparrot.gif",
     "name": "Crypto Parrot",
     "category": "technology"
   },
   {
-    "hd": "hd/sushiparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/sushiparrot.gif",
     "name": "Sushi Parrot",
     "category": "food"
   },
   {
-    "hd": "hd/pumpkinparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/pumpkinparrot.gif",
     "name": "Pumpkin Parrot",
     "category": "holiday"
   },
   {
-    "gif": "angelparrot.gif",
-    "hd": "hd/angelparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/angelparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/angelparrot.gif",
     "name": "Angel Parrot",
     "category": "traditional"
   },
   {
-    "gif": "bluntparrot.gif",
-    "hd": "hd/bluntparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/bluntparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/bluntparrot.gif",
     "name": "Blunt Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/sintparrot.gif",
-    "name": "Sinterklaas Parrot",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/sintparrot.gif",
+    "name": "https://cultofthepartyparrot.com/parrots/Sinterklaas Parrot",
     "category": "holiday"
   },
   {
-    "hd": "hd/pirateparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/pirateparrot.gif",
     "name": "Pirate Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/ceilingparrot.gif",
-    "gif": "ceilingparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/ceilingparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/ceilingparrot.gif",
     "name": "Ceiling Parrot",
     "category": "traditional"
   },
   {
-    "hd": "hd/mardigrasparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/mardigrasparrot.gif",
     "name": "Mardi Gras Parrot",
     "category": "holiday"
   },
   {
-    "gif": "sovjetparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/sovjetparrot.gif",
     "name": "Soviet Parrot",
     "category": "hip"
 
   },
   {
-    "gif": "portalparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/portalparrot.gif",
     "name": "Portal Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/hardhatparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/hardhatparrot.gif",
     "name": "Hard Hat Parrot",
     "category": "traditional"
   },
   {
-    "hd": "hd/flyingmoneyparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/flyingmoneyparrot.gif",
     "name": "Flying Money Parrot",
     "category": "traditional"
   },
   {
-    "hd": "hd/portalorangeparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/portalorangeparrot.gif",
     "name": "Portal Parrot (Orange Portal)",
     "category": "hip"
   },
   {
-    "hd": "hd/portalblueparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/portalblueparrot.gif",
     "name": "Portal Parrot (Blue Portal)",
     "category": "hip"
   },
   {
-    "hd": "hd/bunnyparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/bunnyparrot.gif",
     "name": "Bunny Parrot",
     "category": "holiday"
   },
   {
-    "hd": "hd/norwegianblueparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/norwegianblueparrot.gif",
     "name": "Norwegian Blue Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/transparront.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/transparront.gif",
     "name": "Transparront",
     "category": "hip"
   },
   {
-    "gif": "fixparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/fixparrot.gif",
     "name": "Fix Parrot",
     "category": "traditional"
   },
   {
-    "hd": "hd/brazilianplayerparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/brazilianplayerparrot.gif",
     "name": "Brazilian Player Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/brazilianfanparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/brazilianfanparrot.gif",
     "name": "Brazilian Fan Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/spyparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/spyparrot.gif",
     "name": "Spy Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/marshmallowparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/marshmallowparrot.gif",
     "name": "Marshmallow Parrot",
     "category": "food"
   },
   {
-    "hd": "hd/whitewalkerparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/whitewalkerparrot.gif",
     "name": "White Walker Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/calvinist_parrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/calvinist_parrot.gif",
     "name": "Calvinist Parrot",
     "category": "hip"
   },
   {
-    "gif":"frenchparrot.gif",
-    "hd":"hd/frenchparrot.gif",
+    "gif":"https://cultofthepartyparrot.com/parrots/frenchparrot.gif",
+    "hd":"https://cultofthepartyparrot.com/parrots/hd/frenchparrot.gif",
     "name":"French Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/githubparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/githubparrot.gif",
     "name": "Github Party Parrot",
     "category": "technology"
   },
   {
-    "gif": "bootlegparrot.gif",
-    "hd": "hd/bootlegparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/bootlegparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/bootlegparrot.gif",
     "name": "Bootleg Parrot",
     "category": "traditional"
   },
   {
-    "gif": "bikerparrot.gif",
-    "hd": "hd/bikerparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/bikerparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/bikerparrot.gif",
     "name": "Biker Parrot",
     "category": "hip"
   },
   {
-    "gif": "inverseparrot.gif",
-    "hd": "hd/inverseparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/inverseparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/inverseparrot.gif",
     "name": "Inverse Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/pingpongparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/pingpongparrot.gif",
     "name": "Ping Pong Parrot",
     "category": "traditional"
   },
   {
-    "hd": "hd/laptop_parrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/laptop_parrot.gif",
     "name": "Laptop Parrot",
     "category": "technology"
   },
   {
-    "hd": "hd/60fpsparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/60fpsparrot.gif",
     "name": "60fps Parrot",
     "category": "traditional"
   },
   {
-    "hd": "hd/redhatparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/redhatparrot.gif",
     "name": "Red Hat Parrot",
     "category": "traditional"
   },
   {
-    "hd": "hd/footballparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/footballparrot.gif",
     "name": "Football Parrot",
     "category": "traditional"
   },
   {
-    "hd": "hd/flowerparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/flowerparrot.gif",
     "name": "Flower Parrot",
     "category": "traditional"
   },
   {
-    "hd": "hd/parrotnotfound.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/parrotnotfound.gif",
     "name": "Parrot Not Found",
     "category": "technology"
   },
   {
-    "hd": "hd/spinningparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/spinningparrot.gif",
     "name": "Spinning Parrot",
     "category": "traditional"
   },
   {
-    "hd": "hd/redenvelopeparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/redenvelopeparrot.gif",
     "name": "Red Envelope Parrot",
     "category": "holiday"
   },
   {
-    "hd": "hd/grouchoparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/grouchoparrot.gif",
     "name": "Groucho Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/chicoparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/chicoparrot.gif",
     "name": "Chico Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/harpoparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/harpoparrot.gif",
     "name": "Harpo Parrot",
     "category": "hip"
   },
   {
-    "gif": "schnitzelparrot.gif",
+    "gif": "https://cultofthepartyparrot.com/parrots/schnitzelparrot.gif",
     "name": "Schnitzel Parrot",
     "category": "food"
   },
   {
-    "hd": "hd/vikingparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/vikingparrot.gif",
     "name": "Viking Parrot",
     "category": "traditional"
   },
   {
-    "hd": "hd/darkmodeparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/darkmodeparrot.gif",
     "name": "Dark Mode Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/tiedyeparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/tiedyeparrot.gif",
     "name": "Tie Dye Parrot",
     "category": "hip"
   },
   {
-    "hd": "hd/horizontalparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/horizontalparrot.gif",
     "name": "Horizontal Parrot",
     "category": "traditional"
   },
   {
-    "hd": "hd/sherlockholmesparrot.gif",
+    "hd": "https://cultofthepartyparrot.com/parrots/hd/sherlockholmesparrot.gif",
     "name": "Sherlock Parrot",
     "category": "traditional"
   }
