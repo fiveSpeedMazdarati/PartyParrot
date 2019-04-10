@@ -1,18 +1,18 @@
 package com.parrotparty;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 
 
 @Path("/parrot")
@@ -56,13 +56,47 @@ public class ParrotService {
     }
 
     @GET
-    // The Java method will produce content identified by the MIME Media type "text/plain"
+    @Path("/{name}")
     @Produces("application/json")
-    public void getJSONForParrot() {
-        // TODO: change return type to Response
-        // Heidi will finish this
+    public Response getJSONForParrot(@PathParam("name") String name) {
+        mapper = new ObjectMapper();
+
+        String results = "";
+        // default to internal server error response
+        Response response = Response.status(500).build();
+        Parrot requestedParrot = null;
+
+        // access the parrot data as Objects
+        List<Parrot> allParrots = getAllTheParrots();
+
+        // check for the parrot that the user requested
+        for (Parrot parrot : allParrots){
+            if (parrot.getName().equals(name)) {
+                requestedParrot = parrot;
+            }
+        }
+
+        if (requestedParrot == null) {
+            // send a 404 if the requested parrot doesn't exist
+            response = Response.status(404).build();
+        } else {
+            // send the parrot as json if it exists
+             try {
+                 results = mapper.writeValueAsString(requestedParrot);
+                 response = Response.status(200).entity(results).build();
+             }catch (JsonProcessingException jsonProcessingException) {
+                logger.error("A JsonProcessingException occurred when attempting to represent a user as a JSON string.");
+             } catch (Exception exception) {
+                logger.error("An exception occurred when attempting to represent a user as a JSON string.");
+             }
+        }
+        return response;
+
+        //TODO - Consider space issue:
         // %20 = space
     }
+
+    /*
 
     @GET
     // The Java method will produce content identified by the MIME Media type "text/plain"
@@ -86,6 +120,33 @@ public class ParrotService {
 
         // Luke will finish this method
 
+    }
+    */
+
+
+    /**
+     * Converts JSON data to list of Parrot objects.
+     *
+     * @return parrot Objects
+     */
+    private List<Parrot> getAllTheParrots() {
+        mapper = new ObjectMapper();
+        List<Parrot> allParrots = null;
+
+        try {
+            // TODO - reconcile file path for the json. I needed this one but Kelly's version didn't have the parrots directory
+            allParrots = mapper.readValue(new URL("http://localhost:8080/parrots/parrots.json"), new TypeReference<List<Parrot>>(){});
+
+            logger.info(allParrots);
+        } catch (JsonGenerationException e) {
+            e.printStackTrace();
+        } catch (JsonMappingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return allParrots;
     }
 
 
