@@ -12,6 +12,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -105,14 +106,50 @@ public class ParrotService {
         // TODO: change return type to Response!
         // A race between Heidi and Luke
     }
+    */
 
     @GET
-    // The Java method will produce content identified by the MIME Media type "text/plain"
+     //The Java method will produce content identified by the MIME Media type "text/plain"
+    @Path("/category/{category}")
     @Produces("application/json")
-    public void getJSONForParrotsByCategory() {
-        // TODO: change return type to Response
-        // This one's for Kelly
+    public Response getJSONForParrotsByCategory(@PathParam("category") String category) {
+
+        mapper = new ObjectMapper();
+
+        String results = "";
+        // default to internal server error response
+        Response response = Response.status(500).build();
+        ArrayList<Parrot> requestedCategoryParrots = new ArrayList<Parrot>();
+
+        // access the parrot data as Objects
+        List<Parrot> allParrots = getAllTheParrots();
+
+        // see if category exists
+        for (Parrot parrot : allParrots){
+            if (parrot.getCategory().equals(category)) {
+                requestedCategoryParrots.add(parrot);
+            }
+        }
+
+        if (requestedCategoryParrots.size() < 1) {
+            // send a 404 if the requested parrot doesn't exist
+            response = Response.status(404).build();
+        } else {
+            // send the parrot as json if it exists
+            try {
+                results = mapper.writeValueAsString(requestedCategoryParrots);
+                response = Response.status(200).entity(results).build();
+            }catch (JsonProcessingException jsonProcessingException) {
+                logger.error("A JsonProcessingException occurred when attempting to represent parrots as a JSON string.");
+            } catch (Exception exception) {
+                logger.error("An exception occurred when attempting to represent a parrot as a JSON string.");
+            }
+        }
+        return response;
     }
+
+
+    /*
 
     @POST
     // The Java method will add content to the collection of parrots
@@ -135,7 +172,7 @@ public class ParrotService {
 
         try {
             // TODO - reconcile file path for the json. I needed this one but Kelly's version didn't have the parrots directory
-            allParrots = mapper.readValue(new URL("http://localhost:8080/parrots/parrots.json"), new TypeReference<List<Parrot>>(){});
+            allParrots = mapper.readValue(new URL("http://localhost:8080/parrots.json"), new TypeReference<List<Parrot>>(){});
 
             logger.info(allParrots);
         } catch (JsonGenerationException e) {
