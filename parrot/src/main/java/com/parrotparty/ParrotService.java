@@ -97,16 +97,20 @@ public class ParrotService {
         // %20 = space
     }
 
-    /*
+
 
     @GET
     // The Java method will produce content identified by the MIME Media type "text/plain"
     @Produces("application/json")
-    public void getCategories() {
-        // TODO: change return type to Response!
-        // A race between Heidi and Luke
+    public Response getCategories() {
+        // default to internal server error response
+        Response response = Response.status(500).build();
+
+
+
+        return response;
     }
-    */
+
 
     @GET
      //The Java method will produce content identified by the MIME Media type "text/plain"
