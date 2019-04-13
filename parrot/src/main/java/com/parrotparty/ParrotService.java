@@ -14,12 +14,13 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 
 @Path("/parrots")
-public class ParrotService {
+public class ParrotService implements PropertiesLoader {
 
-    ObjectMapper mapper;
+    private ObjectMapper mapper;
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
@@ -31,8 +32,7 @@ public class ParrotService {
 
         mapper = new ObjectMapper();
 
-
-        String results = "";
+       String results = "";
         try {
 
             // Convert JSON string from file to Object
@@ -188,13 +188,15 @@ public class ParrotService {
      * @return parrot Objects
      */
     private List<Parrot> getAllTheParrots() {
-        mapper = new ObjectMapper();
         List<Parrot> allParrots = null;
+        Properties properties = getPartyParrotProperties();
+        String parrotJsonUrl = properties.getProperty("parrots.data.url");
+        mapper = new ObjectMapper();
 
         try {
-            allParrots = mapper.readValue(new URL("http://localhost:8080/parrots.json"), new TypeReference<List<Parrot>>() {
-            });
-
+            // allParrots = mapper.readValue(new URL("http://localhost:8080/parrots.json"), new TypeReference<List<Parrot>>() {
+            allParrots = mapper.readValue(new URL(parrotJsonUrl), new TypeReference<List<Parrot>>() {
+        });
             logger.info(allParrots);
         } catch (JsonGenerationException e) {
             e.printStackTrace();
@@ -225,5 +227,26 @@ public class ParrotService {
         }
 
         return categories;
+    }
+
+    /**
+     * Loads properties for the application
+     *
+     * @return properties for the application
+     */
+    private Properties getPartyParrotProperties() {
+        // Load properties
+        Properties partyParrotProperties = new Properties();
+
+        try {
+            partyParrotProperties = loadProperties("/partyparrot.properties");
+        } catch (IOException ioException) {
+            logger.debug("An IOException is occurring while attempting to load the properties file.");
+        } catch (Exception exception) {
+            logger.debug("An Exception is occurring while attempting to load the "
+                    + "properties file.");
+        }
+
+        return partyParrotProperties;
     }
 }
