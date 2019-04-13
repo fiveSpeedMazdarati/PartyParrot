@@ -22,6 +22,7 @@ public class ParrotService {
     ObjectMapper mapper;
 
     private final Logger logger = LogManager.getLogger(this.getClass());
+
     // The Java method will process HTTP GET requests
     @GET
     // The Java method will produce content identified by the MIME Media type "text/plain"
@@ -71,7 +72,7 @@ public class ParrotService {
         List<Parrot> allParrots = getAllTheParrots();
 
         // check for the parrot that the user requested
-        for (Parrot parrot : allParrots){
+        for (Parrot parrot : allParrots) {
             if (parrot.getName().equals(name)) {
                 requestedParrot = parrot;
             }
@@ -82,14 +83,14 @@ public class ParrotService {
             response = Response.status(404).build();
         } else {
             // send the parrot as json if it exists
-             try {
-                 results = mapper.writeValueAsString(requestedParrot);
-                 response = Response.status(200).entity(results).build();
-             }catch (JsonProcessingException jsonProcessingException) {
+            try {
+                results = mapper.writeValueAsString(requestedParrot);
+                response = Response.status(200).entity(results).build();
+            } catch (JsonProcessingException jsonProcessingException) {
                 logger.error("A JsonProcessingException occurred when attempting to represent a user as a JSON string.");
-             } catch (Exception exception) {
+            } catch (Exception exception) {
                 logger.error("An exception occurred when attempting to represent a user as a JSON string.");
-             }
+            }
         }
         return response;
 
@@ -97,23 +98,39 @@ public class ParrotService {
         // %20 = space
     }
 
-
-
     @GET
-    // The Java method will produce content identified by the MIME Media type "text/plain"
+    @Path("/categories")
     @Produces("application/json")
     public Response getCategories() {
+        String results = "";
+        mapper = new ObjectMapper();
+
         // default to internal server error response
         Response response = Response.status(500).build();
 
+        List<String> categories = new ArrayList<>();
+        categories = getAllTheCategories();
 
-
+        if (categories.size() < 1) {
+            // send a 404 if there are no categories
+            response = Response.status(404).build();
+        } else {
+            // send the categories as json
+            try {
+                results = mapper.writeValueAsString(categories);
+                response = Response.status(200).entity(results).build();
+            } catch (JsonProcessingException jsonProcessingException) {
+                logger.error("A JsonProcessingException occurred when attempting to represent categories as a JSON string.");
+            } catch (Exception exception) {
+                logger.error("An exception occurred when attempting to represent categories as a JSON string.");
+            }
+        }
         return response;
     }
 
 
     @GET
-     //The Java method will produce content identified by the MIME Media type "text/plain"
+    //The Java method will produce content identified by the MIME Media type "text/plain"
     @Path("/category/{category}")
     @Produces("application/json")
     public Response getJSONForParrotsByCategory(@PathParam("category") String category) {
@@ -129,7 +146,7 @@ public class ParrotService {
         List<Parrot> allParrots = getAllTheParrots();
 
         // see if category exists
-        for (Parrot parrot : allParrots){
+        for (Parrot parrot : allParrots) {
             if (parrot.getCategory().equals(category)) {
                 requestedCategoryParrots.add(parrot);
             }
@@ -143,7 +160,7 @@ public class ParrotService {
             try {
                 results = mapper.writeValueAsString(requestedCategoryParrots);
                 response = Response.status(200).entity(results).build();
-            }catch (JsonProcessingException jsonProcessingException) {
+            } catch (JsonProcessingException jsonProcessingException) {
                 logger.error("A JsonProcessingException occurred when attempting to represent parrots as a JSON string.");
             } catch (Exception exception) {
                 logger.error("An exception occurred when attempting to represent a parrot as a JSON string.");
@@ -175,8 +192,8 @@ public class ParrotService {
         List<Parrot> allParrots = null;
 
         try {
-            // TODO - reconcile file path for the json. I needed this one but Kelly's version didn't have the parrots directory
-            allParrots = mapper.readValue(new URL("http://localhost:8080/parrots.json"), new TypeReference<List<Parrot>>(){});
+            allParrots = mapper.readValue(new URL("http://localhost:8080/parrots.json"), new TypeReference<List<Parrot>>() {
+            });
 
             logger.info(allParrots);
         } catch (JsonGenerationException e) {
@@ -190,5 +207,23 @@ public class ParrotService {
         return allParrots;
     }
 
+    /**
+     * Gets a list of distinct categories assigned to parrots in the JSON file.
+     *
+     * @return a list of all the categories
+     */
+    private List<String> getAllTheCategories() {
+        List<String> categories = new ArrayList<>();
+        String category = null;
+        List<Parrot> allParrots = getAllTheParrots();
 
+        for (Parrot parrot : allParrots) {
+            category = parrot.getCategory();
+            if ((category != null) && !categories.contains(category)) {
+                categories.add(category);
+            }
+        }
+
+        return categories;
+    }
 }
