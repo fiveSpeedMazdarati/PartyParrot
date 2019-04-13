@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-@Path("/parrot")
+@Path("/parrots")
 public class ParrotService {
 
     ObjectMapper mapper;
