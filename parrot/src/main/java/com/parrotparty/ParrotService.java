@@ -149,16 +149,19 @@ public class ParrotService {
     }
 
 
-    /*
+
 
     @POST
+    @Path("addParrot/{name}/{link}/{hdLink}/{category}")
+    @Consumes("text/plain")
     // The Java method will add content to the collection of parrots
     public void createParrot() {
 
-        // Luke will finish this method
+        List<Parrot> allTheParrots = getAllTheParrots();
+
 
     }
-    */
+
 
 
     /**
