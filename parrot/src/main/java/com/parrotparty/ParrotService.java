@@ -149,15 +149,22 @@ public class ParrotService {
     }
 
 
-
-
+    /**
+     * Creates and stores a new parrot
+     */
     @POST
-    @Path("addParrot/{name}/{link}/{hdLink}/{category}")
+    @Path("parrots/{name}/{link}/{hdLink}/{category}")
     @Consumes("text/plain")
-    // The Java method will add content to the collection of parrots
-    public void createParrot() {
+    public void createParrot(@PathParam("name") String name
+                            , @PathParam("link") String link
+                            , @PathParam("hdLink") String hdLink
+                            , @PathParam("category") String category ) {
 
         List<Parrot> allTheParrots = getAllTheParrots();
+
+        Parrot newParrot = new Parrot(name, link, hdLink, category);
+
+        allTheParrots.add(newParrot);
 
 
     }
