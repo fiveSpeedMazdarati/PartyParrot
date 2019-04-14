@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -155,18 +156,32 @@ public class ParrotService {
     @POST
     @Path("parrots/{name}/{link}/{hdLink}/{category}")
     @Consumes("text/plain")
-    public void createParrot(@PathParam("name") String name
+    public Response createParrot(@PathParam("name") String name
                             , @PathParam("link") String link
                             , @PathParam("hdLink") String hdLink
                             , @PathParam("category") String category ) {
 
+        // default to internal server error
+        Response response = Response.status(500).build();
         List<Parrot> allTheParrots = getAllTheParrots();
 
         Parrot newParrot = new Parrot(name, link, hdLink, category);
 
         allTheParrots.add(newParrot);
 
+        mapper = new ObjectMapper();
 
+        try {
+            mapper.writeValue(new File("/parrots.json"), allTheParrots);
+            response.status(200).build();
+        } catch(JsonGenerationException json) {
+            logger.error(json.getMessage());
+            response.status(400).build();
+        } catch (Exception exception) {
+            logger.error(exception.getMessage());
+        }
+
+        return response;
     }
 
 
