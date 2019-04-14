@@ -42,8 +42,8 @@ database.properties
 ## File-based project format:
 *.iws
 
-# properties files
-*.properties
+# log4j.properties
+log4j.properties
 
 ## Plugin-specific files:
 
