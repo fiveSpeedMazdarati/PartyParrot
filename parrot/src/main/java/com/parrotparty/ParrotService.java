@@ -12,6 +12,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +39,7 @@ public class ParrotService implements PropertiesLoader {
 
             // Convert JSON string from file to Object
             //might not need [] when returning single result?
-            Parrot[] result = mapper.readValue(new File("/home/student/IdeaProjects/OtherPartyParrot/parrot/src/main/webapp/parrots.json"), Parrot[].class);
+            Parrot[] result = mapper.readValue(new File("~/tomcat/bin/parrots.json"), Parrot[].class);
 
             //could also use file but I couldn't get relative path out of it
             //Parrot[] result = mapper.readValue(new File("/home/klyke/student/PartyParrot/parrot/src/main/webapp/parrots.json"), Parrot[].class);
@@ -194,8 +195,9 @@ public class ParrotService implements PropertiesLoader {
         mapper = new ObjectMapper();
 
         try {
-            mapper.writeValue(new File("/home/student/IdeaProjects/OtherPartyParrot/parrot/src/main/webapp/parrots.json"), allTheParrots);
-            response = Response.status(200).build();
+            mapper.writeValue(new File("/var/lib/parrot-service/stuff.json"), allTheParrots);
+            // return a success code and the number of parrots added
+            response = Response.status(200).entity("1").build();
         } catch(JsonGenerationException json) {
             //logger.error(json.getMessage());
             response = Response.status(400).build();
