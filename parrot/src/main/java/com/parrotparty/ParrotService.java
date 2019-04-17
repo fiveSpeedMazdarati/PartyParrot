@@ -33,13 +33,14 @@ public class ParrotService implements PropertiesLoader {
     public Response getJSONForParrots() {
 
         mapper = new ObjectMapper();
+        Properties parrotProperties = getPartyParrotProperties();
 
        String results = "";
         try {
 
             // Convert JSON string from file to Object
             //might not need [] when returning single result?
-            Parrot[] result = mapper.readValue(new File("~/tomcat/bin/parrots.json"), Parrot[].class);
+            Parrot[] result = mapper.readValue(new File(parrotProperties.getProperty("parrots.data.url")), Parrot[].class);
 
             //could also use file but I couldn't get relative path out of it
             //Parrot[] result = mapper.readValue(new File("/home/klyke/student/PartyParrot/parrot/src/main/webapp/parrots.json"), Parrot[].class);
@@ -185,6 +186,7 @@ public class ParrotService implements PropertiesLoader {
 
         // default to internal server error
         Response response = Response.noContent().build();
+        Properties partyParrotProperties = getPartyParrotProperties();
 
         List<Parrot> allTheParrots = getAllTheParrots();
 
@@ -195,7 +197,7 @@ public class ParrotService implements PropertiesLoader {
         mapper = new ObjectMapper();
 
         try {
-            mapper.writeValue(new File("/var/lib/parrot-service/stuff.json"), allTheParrots);
+            mapper.writeValue(new File(partyParrotProperties.getProperty("parrots.data.url")), allTheParrots);
             // return a success code and the number of parrots added
             response = Response.status(200).entity("1").build();
         } catch(JsonGenerationException json) {
@@ -224,7 +226,7 @@ public class ParrotService implements PropertiesLoader {
 
         try {
             // allParrots = mapper.readValue(new URL("http://localhost:8080/parrots.json"), new TypeReference<List<Parrot>>() {
-            allParrots = mapper.readValue(new URL(parrotJsonUrl), new TypeReference<List<Parrot>>() {
+            allParrots = mapper.readValue(new File(parrotJsonUrl), new TypeReference<List<Parrot>>() {
         });
             //logger.info(allParrots);
         } catch (JsonGenerationException e) {
