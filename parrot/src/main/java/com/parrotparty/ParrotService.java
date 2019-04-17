@@ -97,8 +97,6 @@ public class ParrotService implements PropertiesLoader {
         }
         return response;
 
-        //TODO - Consider space issue:
-        // %20 = space
     }
 
     @GET
@@ -184,15 +182,36 @@ public class ParrotService implements PropertiesLoader {
                             , @PathParam("hdLink") String hdLink
                             , @PathParam("category") String category ) {
 
-        // default to internal server error
+        return createParrotResponse(new Parrot(name, link, hdLink, category));
+    }
+
+    /**
+     * Creates and stores a new parrot consuming form params
+     */
+    @POST
+    @Path("parrots/")
+    @Consumes("application/x-www-form-urlencoded")
+    public Response createParrotUsingFormParams(@FormParam("name") String name
+            , @FormParam("link") String link
+            , @FormParam("hdLink") String hdLink
+            , @FormParam("category") String category ) {
+
+        return createParrotResponse(new Parrot(name, link, hdLink, category));
+    }
+
+    /**
+     * Utility method to create a parrot and send back a response
+     * @param parrot the parrot to add to the collection
+     * @return the response to send to the web service consumer
+     */
+    private Response createParrotResponse(Parrot parrot) {
+
         Response response = Response.noContent().build();
         Properties partyParrotProperties = getPartyParrotProperties();
 
         List<Parrot> allTheParrots = getAllTheParrots();
 
-        Parrot newParrot = new Parrot(name, link, hdLink, category);
-
-        allTheParrots.add(newParrot);
+        allTheParrots.add(parrot);
 
         mapper = new ObjectMapper();
 
@@ -207,11 +226,9 @@ public class ParrotService implements PropertiesLoader {
             //logger.error(exception.getMessage());
             response = Response.status(608).build();
         }
-
         return response;
+
     }
-
-
 
     /**
      * Converts JSON data to list of Parrot objects.
