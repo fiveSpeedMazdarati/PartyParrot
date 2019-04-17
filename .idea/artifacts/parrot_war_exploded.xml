@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="parrot:war exploded">
-    <output-path>$PROJECT_DIR$/parrot/target/act4</output-path>
+    <output-path>$PROJECT_DIR$/parrot/target/PartyParrot4Ever</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -54,7 +54,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/parrot/target/act4/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/parrot/target/PartyParrot4Ever/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="parrot/web/Web" />
     </root>

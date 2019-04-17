@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="act4.war">
+    <root id="archive" name="PartyParrot4Ever.war">
       <element id="artifact" artifact-name="parrot:war exploded" />
     </root>
   </artifact>
