@@ -43,7 +43,7 @@ database.properties
 *.iws
 
 # log4j.properties
-log4j.properties
+log4j2.properties
 
 ## Plugin-specific files:
 
