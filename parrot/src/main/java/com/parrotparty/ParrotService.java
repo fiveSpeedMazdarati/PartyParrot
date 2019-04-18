@@ -23,6 +23,7 @@ import java.util.Properties;
 public class ParrotService implements PropertiesLoader {
 
     private ObjectMapper mapper;
+    // todo - can we make the properties a final class variable, pulled out of each method? Or does that not work b/c we need to call loader?
 
     //private final Logger logger = LogManager.getLogger(this.getClass());
 
@@ -64,15 +65,23 @@ public class ParrotService implements PropertiesLoader {
     @Path("/{name}")
     @Produces("application/json")
     public Response getJSONForParrot(@PathParam("name") String name) {
-        mapper = new ObjectMapper();
-
+        // set up variables
         String results = "";
-        // default to internal server error response
-        Response response = Response.status(500).build();
+        Properties properties = null;
+        String parrotJsonUrl = "";
         Parrot requestedParrot = null;
 
+        mapper = new ObjectMapper();
+
+        // default to internal server error response
+        Response response = Response.status(500).build();
+
+         // get the json data at the location specified by the properties file
+        properties = getPartyParrotProperties();
+        parrotJsonUrl = properties.getProperty("parrots.data.url");
+
         // access the parrot data as Objects
-        List<Parrot> allParrots = getAllTheParrots();
+        List<Parrot> allParrots = getAllTheParrots(parrotJsonUrl);
 
         // check for the parrot that the user requested
         for (Parrot parrot : allParrots) {
@@ -81,6 +90,7 @@ public class ParrotService implements PropertiesLoader {
             }
         }
 
+        // create the response
         if (requestedParrot == null) {
             // send a 404 if the requested parrot doesn't exist
             response = Response.status(404).build();
@@ -103,15 +113,26 @@ public class ParrotService implements PropertiesLoader {
     @Path("/categories")
     @Produces("application/json")
     public Response getCategories() {
+        // set up variables
         String results = "";
+        Properties properties = null;
+        String parrotJsonUrl = "";
+
         mapper = new ObjectMapper();
 
         // default to internal server error response
         Response response = Response.status(500).build();
 
-        List<String> categories = new ArrayList<>();
-        categories = getAllTheCategories();
+        // get the json data at the location specified by the properties file
+        properties = getPartyParrotProperties();
+        parrotJsonUrl = properties.getProperty("parrots.data.url");
 
+        // get the parrot objects from the json and find their categories
+        List<String> categories = new ArrayList<>();
+        List<Parrot> parrots = getAllTheParrots(parrotJsonUrl);
+        categories = getAllTheCategories(parrots);
+
+        // create the appropriate response
         if (categories.size() < 1) {
             // send a 404 if there are no categories
             response = Response.status(404).build();
@@ -126,6 +147,7 @@ public class ParrotService implements PropertiesLoader {
                 //logger.error("An exception occurred when attempting to represent categories as a JSON string.");
             }
         }
+
         return response;
     }
 
@@ -235,6 +257,7 @@ public class ParrotService implements PropertiesLoader {
      *
      * @return parrot Objects
      */
+    // todo - refactor above methods to send url as a parameter, then delete this version
     private List<Parrot> getAllTheParrots() {
         List<Parrot> allParrots = null;
         Properties properties = getPartyParrotProperties();
@@ -258,16 +281,43 @@ public class ParrotService implements PropertiesLoader {
     }
 
     /**
+     * Converts JSON data to list of Parrot objects.
+     *
+     * @param parrotJsonUrl
+     * @return
+     */
+    public List<Parrot> getAllTheParrots(String parrotJsonUrl) {
+        List<Parrot> allParrots = null;
+
+        mapper = new ObjectMapper();
+
+        try {
+            allParrots = mapper.readValue(new File(parrotJsonUrl), new TypeReference<List<Parrot>>() {
+            });
+            //logger.info(allParrots);
+        } catch (JsonGenerationException e) {
+            e.printStackTrace();
+        } catch (JsonMappingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return allParrots;
+    }
+
+    /**
      * Gets a list of distinct categories assigned to parrots in the JSON file.
      *
-     * @return a list of all the categories
+     * @param parrots list of parrots
+     * @return list of categories assigned to parrots
      */
-    private List<String> getAllTheCategories() {
+    public List<String> getAllTheCategories(List<Parrot> parrots) {
         List<String> categories = new ArrayList<>();
         String category = null;
-        List<Parrot> allParrots = getAllTheParrots();
+        //List<Parrot> allParrots = getAllTheParrots();
 
-        for (Parrot parrot : allParrots) {
+        for (Parrot parrot : parrots) {
             category = parrot.getCategory();
             if ((category != null) && !categories.contains(category)) {
                 categories.add(category);
