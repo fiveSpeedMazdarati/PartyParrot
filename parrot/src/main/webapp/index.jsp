@@ -21,8 +21,13 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
+                    <a href="#top">
+                        Party Parrot 4 Ever
+                    </a>
+                </li>
+                <li>
                     <a href="https://cultofthepartyparrot.com" target="_blank">
-                        Party Parrots
+                        Party Parrots Website
                     </a>
                 </li>
                 <li>
@@ -41,6 +46,9 @@
                     <a href="#add">Add A Parrot</a>
                 </li>
                 <li>
+                    <a href="/JavaDoc" target="_blank">Documentation</a>
+                </li>
+                <li>
                     <a href="#donate">Donate</a>
                 </li>
 
@@ -53,23 +61,27 @@
             <div class="container-fluid">
 <%--
                 <div class="row">
+
 --%>
+                <span class="trick" id="top"></span>
                     <div class="col-md-12">
-                        <h3>The Preeminent Party Parrot API on the ENTIRE internets!</h3>
+                        <h4 class=text-center">The Preeminent Party Parrot API on the ENTIRE internets!</h4>
 
                     </div>
                 <br/><br/>
-                <h3>Method URLs</h3>
+                <h4>Method URLs</h4>
     <p>Base: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots">http://52.14.41.110:8080/PartyParrot4Ever/services/parrots</a></p>
 
                 <table class="table table-striped">
                     <thead>
                     <tr>
+                        <th class="pr-3">Verbage</th>
                         <th>Method</th>
                         <th>Endpoint</th>
                         <th>Description</th>
                     </thead>
                     <tr>
+                        <td>GET</td>
                         <td>Get Parrot by entering Parrot's name
                         </td>
                         <td>/parrot/(parrot name)
@@ -78,6 +90,7 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>GET</td>
                         <td>Get Parrots by entering Parrot category
                         </td>
                         <td>/category/(category name)
@@ -87,6 +100,7 @@
                     </tr>
 
                     <tr>
+                        <td>GET</td>
                         <td>Get List of Parrot Categories
                         </td>
                         <td>/categories
@@ -96,6 +110,7 @@
                     </tr>
 
                     <tr>
+                        <td>GET</td>
                         <td class="mr-2">Get All the Parrots
                         </td>
                         <td>(the base url will take you there!)
@@ -105,6 +120,7 @@
                     </tr>
 
                     <tr>
+                        <td>POST</td>
                         <td>Add a Parrot
                         </td>
                         <td>/parrots/(name)/(link)/(hd link)/(category)
@@ -115,10 +131,10 @@
 
 
                 </table>
-
-                <section class="mt-5" id="name">
+                <span class="trick" id="name"></span>
+                <section class="mt-5">
                     <h3>Get Parrot By Name</h3>
-                    <p>Example Request: /Aussie Parrot<small class="pl-2">(Spaces are okay!! We handle that)</small></p>
+                    <p>Example Request: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/Aussie Parrot">/Aussie Parrot</a><small class="pl-2">(Spaces are okay!! We handle that)</small></p>
                     <div class="card">
                         <div class="card-body">
                             <code> <br/>
@@ -133,8 +149,8 @@
                         </div>
                     </div>
                 </section>
-
-    <section class="mt-5" id="category">
+    <span class="trick" id="category"></span>
+    <section class="mt-5">
         <h3>Get Parrot By Category</h3>
         <p>Example Request: /technology</p>
         <div class="card">
@@ -166,8 +182,8 @@
             </div>
         </div>
     </section>
-
-    <section class="mt-5" id="categories">
+    <span class="trick" id="categories"></span>
+    <section class="mt-5">
         <h3>Get Possible Parrot Categories</h3>
         <p>Request: /categories</p>
         <div class="card">
@@ -187,8 +203,8 @@
         </div>
     </section>
 
-
-    <section class="mt-5" id="all">
+    <span class="trick" id="all"></span>
+    <section class="mt-5">
         <h3>Get All Parrots!</h3>
         <p>Request: /parrots</p>
         <div class="card">
@@ -231,10 +247,10 @@
             </div>
         </div>
         <!-- /#page-content-wrapper -->
-
-        <section class="mt-5" id="add">
+        <span class="trick" id="add"></span>
+        <section class="mt-5">
             <h3>Add a Parrot!</h3>
-            <p>Example Request: /Doge<br/>
+                <p>Example Request: /Doge<br/>
                 <span class="ml-5">  /https://cultofthepartyparrot.com/guests/hd/dogeparrot.gif</span><br/>
                 <span class="ml-5">  /https://cultofthepartyparrot.com/guests/hd/dogeparrot.gif</span><br/>
                 <span class="ml-5">  /guests</span><br/>
@@ -244,16 +260,16 @@
             <div class="card-body">
             <form enctype="application/x-www-form-urlencoded" action="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/parrots/" method="POST">
             <div class="form-group">
-                <label class="mr-3">Name: </label><input name="name"/><br />
+                <label class="mr-4">Name:&nbsp; </label><input name="name"/><br />
             </div>
             <div class="form-group">
-                <label class="mr-3">Link: </label><input name="link"><br />
+                <label class="mr-3">Link:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input name="link"><br />
             </div>
             <div class="form-group">
                 <label class="mr-3">HD Link:</label><input name="hdLink"><br />
             </div>
             <div class="form-group">
-                <label class="mr-3">Category:</label><input name="category"><br />
+                <label class="mr-2">Category:</label><input name="category"><br />
             </div>
                 <span class="float-right">
                 <input type="submit" value="Add Parrot" class="btn btn-outline-info">
@@ -264,7 +280,8 @@
 
         </section>
 <br/><br/>
-        <section id="donate mt-5">
+        <span class="trick" id="donate"></span>
+        <section class="mt-5">
 
             <h3>Donate to keep the Parrots Partying!</h3>
             <br/>
