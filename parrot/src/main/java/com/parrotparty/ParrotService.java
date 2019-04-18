@@ -233,11 +233,15 @@ public class ParrotService implements PropertiesLoader {
      * @return the response to send to the web service consumer
      */
     private Response createParrotResponse(Parrot parrot) {
+        String parrotJsonUrl = "";
 
         Response response = Response.noContent().build();
         Properties partyParrotProperties = getPartyParrotProperties();
 
-        List<Parrot> allTheParrots = getAllTheParrots();  //todo refactor to send param
+        // get the json data at the location specified by the properties file
+        parrotJsonUrl = partyParrotProperties.getProperty("parrots.data.url"); // todo (?) could use var in try block too
+
+        List<Parrot> allTheParrots = getAllTheParrots(parrotJsonUrl);
 
         allTheParrots.add(parrot);
 
@@ -256,34 +260,6 @@ public class ParrotService implements PropertiesLoader {
         }
         return response;
 
-    }
-
-    /**
-     * Converts JSON data to list of Parrot objects.
-     *
-     * @return parrot Objects
-     */
-    // todo - refactor above methods to send url as a parameter, then delete this version
-    private List<Parrot> getAllTheParrots() {
-        List<Parrot> allParrots = null;
-        Properties properties = getPartyParrotProperties();
-        String parrotJsonUrl = properties.getProperty("parrots.data.url");
-        mapper = new ObjectMapper();
-
-        try {
-            // allParrots = mapper.readValue(new URL("http://localhost:8080/parrots.json"), new TypeReference<List<Parrot>>() {
-            allParrots = mapper.readValue(new File(parrotJsonUrl), new TypeReference<List<Parrot>>() {
-        });
-            //logger.info(allParrots);
-        } catch (JsonGenerationException e) {
-            e.printStackTrace();
-        } catch (JsonMappingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return allParrots;
     }
 
     /**
