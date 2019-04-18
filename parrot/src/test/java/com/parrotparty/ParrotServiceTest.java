@@ -24,7 +24,7 @@ public class ParrotServiceTest implements PropertiesLoader {
     Properties testProperties;
     String parrotJsonUrl;
 
-    // private final Logger logger = LogManager.getLogger(this.getClass());
+    private final Logger logger = LogManager.getLogger(this.getClass());
     // ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console. Set system property 'log4j2.debug' to show Log4j2 internal initialization logging.
 
     /**
@@ -40,10 +40,10 @@ public class ParrotServiceTest implements PropertiesLoader {
         try {
             testProperties = loadProperties("/partyParrotTest.properties");
         } catch (IOException ioException) {
-            //logger.debug("An IOException is occurring while attempting to load the properties file.");
+            logger.debug("An IOException is occurring while attempting to load the properties file.");
         } catch (Exception exception) {
-            //logger.debug("An Exception is occurring while attempting to load the "
-            //+ "properties file.");
+            logger.debug("An Exception is occurring while attempting to load the "
+            + "properties file.");
         }
 
         parrotJsonUrl = testProperties.getProperty("parrots.data.url");
@@ -79,5 +79,7 @@ public class ParrotServiceTest implements PropertiesLoader {
         // expected categories: traditional, technology, hip
         assertEquals(3, testCategories.size());
         assertTrue(testCategories.contains("traditional"));
+        assertTrue(testCategories.contains("technology"));
+        assertTrue(testCategories.contains("hip"));
     }
 }

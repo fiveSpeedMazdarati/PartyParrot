@@ -19,17 +19,23 @@ import java.util.List;
 import java.util.Properties;
 
 
+/**
+ * A service that processes requests to get information on Party Parrots or to add new Party Parrots to the collection.
+ */
 @Path("/parrots")
 public class ParrotService implements PropertiesLoader {
 
     private ObjectMapper mapper;
     // todo - can we make the properties a final class variable, pulled out of each method? Or does that not work b/c we need to call loader?
 
-    //private final Logger logger = LogManager.getLogger(this.getClass());
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
-    // The Java method will process HTTP GET requests
+    /**
+     * Processes GET requests for all the Party Parrots in the collection and returns the data as json.
+     *
+     * @return a response with json data on all the Party Parrots in the collection
+     */
     @GET
-    // The Java method will produce content identified by the MIME Media type "text/plain"
     @Produces("application/json")
     public Response getJSONForParrots() {
 
@@ -47,20 +53,26 @@ public class ParrotService implements PropertiesLoader {
             //Parrot[] result = mapper.readValue(new File("/home/klyke/student/PartyParrot/parrot/src/main/webapp/parrots.json"), Parrot[].class);
             results = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(result);
 
-            //logger.info(result);
-
-
+            logger.info(result);
         } catch (JsonGenerationException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         } catch (JsonMappingException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
+        } catch (Exception e){
+            logger.error(e.getMessage());
         }
 
         return Response.status(200).entity(results).build();
     }
 
+    /**
+     * Processes GET requests for a single Party Parrot, searched by name, and returns the data as json.
+     *
+     * @param name the name of the Party Parrot
+     * @return a response with the json data for the parrot
+     */
     @GET
     @Path("/{name}")
     @Produces("application/json")
@@ -100,15 +112,20 @@ public class ParrotService implements PropertiesLoader {
                 results = mapper.writeValueAsString(requestedParrot);
                 response = Response.status(200).entity(results).build();
             } catch (JsonProcessingException jsonProcessingException) {
-                //logger.error("A JsonProcessingException occurred when attempting to represent a user as a JSON string.");
+                logger.error(jsonProcessingException.getMessage());
             } catch (Exception exception) {
-                //logger.error("An exception occurred when attempting to represent a user as a JSON string.");
+                logger.error(exception.getMessage());
             }
         }
         return response;
 
     }
 
+    /**
+     * Processes GET requests for all the categories that Party Parrots in the collection belong to.
+     *
+     * @return a response with all the categories
+     */
     @GET
     @Path("/categories")
     @Produces("application/json")
@@ -142,9 +159,9 @@ public class ParrotService implements PropertiesLoader {
                 results = mapper.writeValueAsString(categories);
                 response = Response.status(200).entity(results).build();
             } catch (JsonProcessingException jsonProcessingException) {
-               // logger.error("A JsonProcessingException occurred when attempting to represent categories as a JSON string.");
+                logger.error(jsonProcessingException.getMessage());
             } catch (Exception exception) {
-                //logger.error("An exception occurred when attempting to represent categories as a JSON string.");
+                logger.error(exception.getMessage());
             }
         }
 
@@ -152,9 +169,15 @@ public class ParrotService implements PropertiesLoader {
     }
 
 
+    /**
+     * Processes GET requests for all the Party Parrots that belong to a specific category and returns their data as json.
+     *
+     * @param category the category
+     * @return the json for parrots in the category
+     */
     @GET
     //The Java method will produce content identified by the MIME Media type "text/plain"
-    @Path("/category/{category}")
+    @Path("/categorized-parrots/{category}")
     @Produces("application/json")
     public Response getJSONForParrotsByCategory(@PathParam("category") String category) {
 
@@ -190,9 +213,9 @@ public class ParrotService implements PropertiesLoader {
                 results = mapper.writeValueAsString(requestedCategoryParrots);
                 response = Response.status(200).entity(results).build();
             } catch (JsonProcessingException jsonProcessingException) {
-                //logger.error("A JsonProcessingException occurred when attempting to represent parrots as a JSON string.");
+                logger.error(jsonProcessingException.getMessage());
             } catch (Exception exception) {
-                //logger.error("An exception occurred when attempting to represent a parrot as a JSON string.");
+                logger.error(exception.getMessage());
             }
         }
         return response;
@@ -201,9 +224,15 @@ public class ParrotService implements PropertiesLoader {
 
     /**
      * Creates and stores a new parrot
+     *
+     * @param name     the name
+     * @param link     the link
+     * @param hdLink   the hd link
+     * @param category the category
+     * @return the response
      */
     @POST
-    @Path("parrots/{name}/{link}/{hdLink}/{category}")
+    @Path("new-parrots/{name}/{link}/{hdLink}/{category}")
     @Consumes("text/plain")
     public Response createParrot(@PathParam("name") String name
                             , @PathParam("link") String link
@@ -215,9 +244,15 @@ public class ParrotService implements PropertiesLoader {
 
     /**
      * Creates and stores a new parrot consuming form params
+     *
+     * @param name     the name
+     * @param link     the link
+     * @param hdLink   the hd link
+     * @param category the category
+     * @return the response
      */
     @POST
-    @Path("parrots/")
+    @Path("new-parrots/")
     @Consumes("application/x-www-form-urlencoded")
     public Response createParrotUsingFormParams(@FormParam("name") String name
             , @FormParam("link") String link
@@ -252,10 +287,10 @@ public class ParrotService implements PropertiesLoader {
             // return a success code and the number of parrots added
             response = Response.status(200).entity("1").build();
         } catch(JsonGenerationException json) {
-            //logger.error(json.getMessage());
+            logger.error(json.getMessage());
             response = Response.status(400).build();
         } catch (Exception exception) {
-            //logger.error(exception.getMessage());
+            logger.error(exception.getMessage());
             response = Response.status(608).build();
         }
         return response;
@@ -265,8 +300,8 @@ public class ParrotService implements PropertiesLoader {
     /**
      * Converts JSON data to list of Parrot objects.
      *
-     * @param parrotJsonUrl
-     * @return
+     * @param parrotJsonUrl the parrot json url
+     * @return all the parrots
      */
     public List<Parrot> getAllTheParrots(String parrotJsonUrl) {
         List<Parrot> allParrots = null;
@@ -276,13 +311,15 @@ public class ParrotService implements PropertiesLoader {
         try {
             allParrots = mapper.readValue(new File(parrotJsonUrl), new TypeReference<List<Parrot>>() {
             });
-            //logger.info(allParrots);
-        } catch (JsonGenerationException e) {
-            e.printStackTrace();
-        } catch (JsonMappingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+            logger.info(allParrots);
+        } catch (JsonGenerationException jsonGenerationException) {
+            logger.error(jsonGenerationException.getMessage());
+        } catch (JsonMappingException jsonMappingException) {
+            logger.error(jsonMappingException.getMessage());
+        } catch (IOException ioException) {
+            logger.error(ioException.getMessage());
+        } catch (Exception exception) {
+            logger.error(exception.getMessage());
         }
 
         return allParrots;
@@ -320,10 +357,9 @@ public class ParrotService implements PropertiesLoader {
         try {
             partyParrotProperties = loadProperties("/partyparrot.properties");
         } catch (IOException ioException) {
-            //logger.debug("An IOException is occurring while attempting to load the properties file.");
+            logger.error(ioException.getMessage());
         } catch (Exception exception) {
-            //logger.debug("An Exception is occurring while attempting to load the "
-                    //+ "properties file.");
+            logger.error(exception.getMessage());
         }
 
         return partyParrotProperties;
