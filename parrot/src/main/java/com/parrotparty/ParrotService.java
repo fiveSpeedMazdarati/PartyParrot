@@ -19,6 +19,9 @@ import java.util.List;
 import java.util.Properties;
 
 
+/**
+ * A service that processes requests to get information on Party Parrots or to add new Party Parrots to the collection.
+ */
 @Path("/parrots")
 public class ParrotService implements PropertiesLoader {
 
@@ -27,9 +30,12 @@ public class ParrotService implements PropertiesLoader {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-    // The Java method will process HTTP GET requests
+    /**
+     * Processes GET requests for all the Party Parrots in the collection and returns the data as json.
+     *
+     * @return a response with json data on all the Party Parrots in the collection
+     */
     @GET
-    // The Java method will produce content identified by the MIME Media type "text/plain"
     @Produces("application/json")
     public Response getJSONForParrots() {
 
@@ -61,6 +67,12 @@ public class ParrotService implements PropertiesLoader {
         return Response.status(200).entity(results).build();
     }
 
+    /**
+     * Processes GET requests for a single Party Parrot, searched by name, and returns the data as json.
+     *
+     * @param name the name of the Party Parrot
+     * @return a response with the json data for the parrot
+     */
     @GET
     @Path("/{name}")
     @Produces("application/json")
@@ -109,6 +121,11 @@ public class ParrotService implements PropertiesLoader {
 
     }
 
+    /**
+     * Processes GET requests for all the categories that Party Parrots in the collection belong to.
+     *
+     * @return a response with all the categories
+     */
     @GET
     @Path("/categories")
     @Produces("application/json")
@@ -152,6 +169,12 @@ public class ParrotService implements PropertiesLoader {
     }
 
 
+    /**
+     * Processes GET requests for all the Party Parrots that belong to a specific category and returns their data as json.
+     *
+     * @param category the category
+     * @return the json for parrots in the category
+     */
     @GET
     //The Java method will produce content identified by the MIME Media type "text/plain"
     @Path("/categorized-parrots/{category}")
@@ -201,6 +224,12 @@ public class ParrotService implements PropertiesLoader {
 
     /**
      * Creates and stores a new parrot
+     *
+     * @param name     the name
+     * @param link     the link
+     * @param hdLink   the hd link
+     * @param category the category
+     * @return the response
      */
     @POST
     @Path("new-parrots/{name}/{link}/{hdLink}/{category}")
@@ -215,6 +244,12 @@ public class ParrotService implements PropertiesLoader {
 
     /**
      * Creates and stores a new parrot consuming form params
+     *
+     * @param name     the name
+     * @param link     the link
+     * @param hdLink   the hd link
+     * @param category the category
+     * @return the response
      */
     @POST
     @Path("new-parrots/")
@@ -265,8 +300,8 @@ public class ParrotService implements PropertiesLoader {
     /**
      * Converts JSON data to list of Parrot objects.
      *
-     * @param parrotJsonUrl
-     * @return
+     * @param parrotJsonUrl the parrot json url
+     * @return all the parrots
      */
     public List<Parrot> getAllTheParrots(String parrotJsonUrl) {
         List<Parrot> allParrots = null;
