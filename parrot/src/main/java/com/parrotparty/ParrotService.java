@@ -159,14 +159,20 @@ public class ParrotService implements PropertiesLoader {
     public Response getJSONForParrotsByCategory(@PathParam("category") String category) {
 
         mapper = new ObjectMapper();
-
+        Properties properties = null;
         String results = "";
+        String parrotJsonUrl = "";
+
         // default to internal server error response
         Response response = Response.status(500).build();
         ArrayList<Parrot> requestedCategoryParrots = new ArrayList<Parrot>();
 
+        // get the json data at the location specified by the properties file
+        properties = getPartyParrotProperties();
+        parrotJsonUrl = properties.getProperty("parrots.data.url");
+
         // access the parrot data as Objects
-        List<Parrot> allParrots = getAllTheParrots();
+        List<Parrot> allParrots = getAllTheParrots(parrotJsonUrl);
 
         // see if category exists
         for (Parrot parrot : allParrots) {
@@ -231,7 +237,7 @@ public class ParrotService implements PropertiesLoader {
         Response response = Response.noContent().build();
         Properties partyParrotProperties = getPartyParrotProperties();
 
-        List<Parrot> allTheParrots = getAllTheParrots();
+        List<Parrot> allTheParrots = getAllTheParrots();  //todo refactor to send param
 
         allTheParrots.add(parrot);
 
@@ -315,7 +321,6 @@ public class ParrotService implements PropertiesLoader {
     public List<String> getAllTheCategories(List<Parrot> parrots) {
         List<String> categories = new ArrayList<>();
         String category = null;
-        //List<Parrot> allParrots = getAllTheParrots();
 
         for (Parrot parrot : parrots) {
             category = parrot.getCategory();
