@@ -25,7 +25,7 @@ public class ParrotService implements PropertiesLoader {
     private ObjectMapper mapper;
     // todo - can we make the properties a final class variable, pulled out of each method? Or does that not work b/c we need to call loader?
 
-    //private final Logger logger = LogManager.getLogger(this.getClass());
+    private final Logger logger = LogManager.getLogger(this.getClass());
 
     // The Java method will process HTTP GET requests
     @GET
@@ -47,15 +47,15 @@ public class ParrotService implements PropertiesLoader {
             //Parrot[] result = mapper.readValue(new File("/home/klyke/student/PartyParrot/parrot/src/main/webapp/parrots.json"), Parrot[].class);
             results = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(result);
 
-            //logger.info(result);
-
-
+            logger.info(result);
         } catch (JsonGenerationException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         } catch (JsonMappingException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
+        } catch (Exception e){
+            logger.error(e.getMessage());
         }
 
         return Response.status(200).entity(results).build();
@@ -100,9 +100,9 @@ public class ParrotService implements PropertiesLoader {
                 results = mapper.writeValueAsString(requestedParrot);
                 response = Response.status(200).entity(results).build();
             } catch (JsonProcessingException jsonProcessingException) {
-                //logger.error("A JsonProcessingException occurred when attempting to represent a user as a JSON string.");
+                logger.error(jsonProcessingException.getMessage());
             } catch (Exception exception) {
-                //logger.error("An exception occurred when attempting to represent a user as a JSON string.");
+                logger.error(exception.getMessage());
             }
         }
         return response;
@@ -142,9 +142,9 @@ public class ParrotService implements PropertiesLoader {
                 results = mapper.writeValueAsString(categories);
                 response = Response.status(200).entity(results).build();
             } catch (JsonProcessingException jsonProcessingException) {
-               // logger.error("A JsonProcessingException occurred when attempting to represent categories as a JSON string.");
+                logger.error(jsonProcessingException.getMessage());
             } catch (Exception exception) {
-                //logger.error("An exception occurred when attempting to represent categories as a JSON string.");
+                logger.error(exception.getMessage());
             }
         }
 
@@ -190,9 +190,9 @@ public class ParrotService implements PropertiesLoader {
                 results = mapper.writeValueAsString(requestedCategoryParrots);
                 response = Response.status(200).entity(results).build();
             } catch (JsonProcessingException jsonProcessingException) {
-                //logger.error("A JsonProcessingException occurred when attempting to represent parrots as a JSON string.");
+                logger.error(jsonProcessingException.getMessage());
             } catch (Exception exception) {
-                //logger.error("An exception occurred when attempting to represent a parrot as a JSON string.");
+                logger.error(exception.getMessage());
             }
         }
         return response;
@@ -252,10 +252,10 @@ public class ParrotService implements PropertiesLoader {
             // return a success code and the number of parrots added
             response = Response.status(200).entity("1").build();
         } catch(JsonGenerationException json) {
-            //logger.error(json.getMessage());
+            logger.error(json.getMessage());
             response = Response.status(400).build();
         } catch (Exception exception) {
-            //logger.error(exception.getMessage());
+            logger.error(exception.getMessage());
             response = Response.status(608).build();
         }
         return response;
@@ -276,13 +276,15 @@ public class ParrotService implements PropertiesLoader {
         try {
             allParrots = mapper.readValue(new File(parrotJsonUrl), new TypeReference<List<Parrot>>() {
             });
-            //logger.info(allParrots);
-        } catch (JsonGenerationException e) {
-            e.printStackTrace();
-        } catch (JsonMappingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+            logger.info(allParrots);
+        } catch (JsonGenerationException jsonGenerationException) {
+            logger.error(jsonGenerationException.getMessage());
+        } catch (JsonMappingException jsonMappingException) {
+            logger.error(jsonMappingException.getMessage());
+        } catch (IOException ioException) {
+            logger.error(ioException.getMessage());
+        } catch (Exception exception) {
+            logger.error(exception.getMessage());
         }
 
         return allParrots;
@@ -320,10 +322,9 @@ public class ParrotService implements PropertiesLoader {
         try {
             partyParrotProperties = loadProperties("/partyparrot.properties");
         } catch (IOException ioException) {
-            //logger.debug("An IOException is occurring while attempting to load the properties file.");
+            logger.error(ioException.getMessage());
         } catch (Exception exception) {
-            //logger.debug("An Exception is occurring while attempting to load the "
-                    //+ "properties file.");
+            logger.error(exception.getMessage());
         }
 
         return partyParrotProperties;
