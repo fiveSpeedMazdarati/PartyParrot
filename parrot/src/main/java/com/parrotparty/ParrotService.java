@@ -154,7 +154,7 @@ public class ParrotService implements PropertiesLoader {
 
     @GET
     //The Java method will produce content identified by the MIME Media type "text/plain"
-    @Path("/category/{category}")
+    @Path("/categorized-parrots/{category}")
     @Produces("application/json")
     public Response getJSONForParrotsByCategory(@PathParam("category") String category) {
 
@@ -203,7 +203,7 @@ public class ParrotService implements PropertiesLoader {
      * Creates and stores a new parrot
      */
     @POST
-    @Path("parrots/{name}/{link}/{hdLink}/{category}")
+    @Path("new-parrots/{name}/{link}/{hdLink}/{category}")
     @Consumes("text/plain")
     public Response createParrot(@PathParam("name") String name
                             , @PathParam("link") String link
@@ -217,7 +217,7 @@ public class ParrotService implements PropertiesLoader {
      * Creates and stores a new parrot consuming form params
      */
     @POST
-    @Path("parrots/")
+    @Path("new-parrots/")
     @Consumes("application/x-www-form-urlencoded")
     public Response createParrotUsingFormParams(@FormParam("name") String name
             , @FormParam("link") String link
