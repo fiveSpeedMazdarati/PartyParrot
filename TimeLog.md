@@ -13,3 +13,4 @@
 | 4/13/19 | adds get categories feature, loads properties file, adds test shell | 3 | Heidi | Still have questions about how to use the properties file more efficiently; also not sure how to set up a test-specific json data file. Did not research the latter much.|
 | 4/16/19 | resolved file read/write problem, changed file path, updated code to use properties file|2|Luke| learned a metric ton about Linux file structure and permissions|
 | 4/17/19 | added POST service request to consume form params, refactored both POST request methods to share common code, built quick form to test new POST request, troubleshoot improper tomee shutdown/startup on AWS | Luke | 3 | consuming form params is pretty neat. I like writing code, but I don't like troubleshooting the tools.|
+| 4/17/19 | created user guide | 2 | Kelly |  |
