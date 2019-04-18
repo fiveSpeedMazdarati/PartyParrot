@@ -1,5 +1,6 @@
 package com.heidiaandahl.controller;
 
+import com.parrotparty.ParrotService;
 import com.parrotparty.PropertiesLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -37,6 +38,8 @@ public class ApplicationStartup extends HttpServlet implements PropertiesLoader 
             log("An Exception is occurring while attempting to load the "
                     + "properties file.");
         }
+
+
 
         ServletContext context = getServletContext();
         context.setAttribute("partyParrotProperties", partyParrotProperties);

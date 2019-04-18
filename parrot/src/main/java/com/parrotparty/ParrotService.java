@@ -23,7 +23,14 @@ public class ParrotService implements PropertiesLoader {
 
     private ObjectMapper mapper;
 
-    //private final Logger logger = LogManager.getLogger(this.getClass());
+
+    static List<Parrot> allTheParrots = getAllTheParrotsFromJson();
+
+    private final Logger logger = LogManager.getLogger(this.getClass());
+
+    public static List<Parrot> getAllTheParrots() {
+        return allTheParrots;
+    }
 
     // The Java method will process HTTP GET requests
     @GET
@@ -214,7 +221,7 @@ public class ParrotService implements PropertiesLoader {
      *
      * @return parrot Objects
      */
-    private List<Parrot> getAllTheParrots() {
+    private List<Parrot> getAllTheParrotsFromJson() {
         List<Parrot> allParrots = null;
         Properties properties = getPartyParrotProperties();
         String parrotJsonUrl = properties.getProperty("parrots.data.url");
