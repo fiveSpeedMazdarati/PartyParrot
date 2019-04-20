@@ -1,6 +1,10 @@
-img {
+#banner {
     width: 100%;
     height: 6.5em;
+}
+
+#parrotsLarge {
+    max-width: 35%;
 }
 
 .tm {

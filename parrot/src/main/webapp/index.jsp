@@ -9,7 +9,7 @@
 <div class="container">
     <div class="container-fluid">
     <div class="fixed-top">
-        <img src="parrotbanner.jpg" alt="banner" style="width: 100%">
+        <img id="banner" src="parrotbanner.jpg" alt="banner" style="width: 100%">
     </div>
     </div>
 </div>
@@ -65,12 +65,12 @@
 --%>
                 <span class="trick" id="top"></span>
                     <div class="col-md-12">
-                        <h4 class=text-center">The Preeminent Party Parrot API on the ENTIRE internets!</h4>
-
+                        <h4 class=text-center">The Preeminent Party Parrot API on the ENTIRE internet!</h4>
+                        <img class="col-md-6 offset-3" id="parrotsLarge" src="parrotsLarge.jpg" alt="parrots"/>
                     </div>
                 <br/><br/>
                 <h4>Method URLs</h4>
-    <p>Base: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots">http://52.14.41.110:8080/PartyParrot4Ever/services/parrots</a></p>
+                <p>Base: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots">http://52.14.41.110:8080/PartyParrot4Ever/services/parrots</a></p>
 
                 <table class="table table-striped">
                     <thead>
