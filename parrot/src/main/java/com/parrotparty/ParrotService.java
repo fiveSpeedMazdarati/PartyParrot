@@ -67,6 +67,31 @@ public class ParrotService implements PropertiesLoader {
         return Response.status(200).entity(results).build();
     }
 
+    // todo figure out if this will work
+
+    public Response getParrotDataResponse(boolean haveData, Object data) {
+        String results = "";
+
+        // default to internal server error response
+        Response response = Response.status(500).build();
+
+        if (!haveData) {
+            response = Response.status(404).build();
+        } else {
+            // send the parrot as json if it exists
+            try {
+                results = mapper.writeValueAsString(data);
+                response = Response.status(200).entity(results).build();
+            } catch (JsonProcessingException jsonProcessingException) {
+                logger.error(jsonProcessingException.getMessage());
+            } catch (Exception exception) {
+                logger.error(exception.getMessage());
+            }
+        }
+
+        return response;
+    }
+
     /**
      * Processes GET requests for a single Party Parrot, searched by name, and returns the data as json.
      *

@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.ws.rs.core.Response;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -82,4 +83,90 @@ public class ParrotServiceTest implements PropertiesLoader {
         assertTrue(testCategories.contains("technology"));
         assertTrue(testCategories.contains("hip"));
     }
+
+    /**
+     * Tests the ability of getParrotDataResponse to produce a status 200 response for a list of parrots.
+     */
+    @Test
+    public void getParrotDataResponse200ParrotsSuccess() throws Exception {
+        // get the list of parrots from the test JSON file
+        testParrots = testService.getAllTheParrots(parrotJsonUrl);
+
+        boolean testBoolean = true;
+
+        Response testResponse = (Response) testService.getParrotDataResponse(testBoolean, testParrots);
+        assertEquals(200, testResponse.getStatus());
+    }
+
+    /**
+     * Tests the ability of getParrotDataResponse to produce a status 404 response for an empty list of parrots.
+     */
+    @Test
+    public void getParrotDataResponse404ParrotsSuccess() throws Exception {
+        boolean testBoolean = false;
+
+        Response testResponse = (Response) testService.getParrotDataResponse(testBoolean, testParrots);
+        assertEquals(404, testResponse.getStatus());
+    }
+
+    /**
+     * Tests the ability of getParrotDataResponse to produce a status 200 response for a list of categories.
+     */
+    @Test
+    public void getParrotDataResponse200CategoriesSuccess() throws Exception {
+        // get the list of parrots from the test JSON file
+        testParrots = testService.getAllTheParrots(parrotJsonUrl);
+
+        List<String> testCategories = testService.getAllTheCategories(testParrots);
+
+        boolean testBoolean = true;
+
+        Response testResponse = (Response) testService.getParrotDataResponse(testBoolean, testCategories);
+        assertEquals(200, testResponse.getStatus());
+    }
+
+    /**
+     * Tests the ability of getParrotDataResponse to produce a status 404 response for an empty list of categories.
+     */
+    @Test
+    public void getParrotDataResponse404CategoriesSuccess() throws Exception {
+        boolean testBoolean = false;
+
+        List<String> testCategories = new ArrayList<String>();
+
+        Response testResponse = (Response) testService.getParrotDataResponse(testBoolean, testCategories);
+        assertEquals(404, testResponse.getStatus());
+    }
+
+
+    /**
+     * Tests the ability of getParrotDataResponse to produce a status 200 response for a single parrot
+     */
+    @Test
+    public void getParrotDataResponse200ParrotSuccess() throws Exception {
+        // get the list of parrots from the test JSON file
+        testParrots = testService.getAllTheParrots(parrotJsonUrl);
+        Parrot testParrot = testParrots.get(0);
+
+        boolean testBoolean = true;
+
+        Response testResponse = (Response) testService.getParrotDataResponse(testBoolean, testParrot);
+        assertEquals(200, testResponse.getStatus());
+    }
+
+
+    /**
+     * Tests the ability of getParrotDataResponse to produce a status 404 response for null parrot.
+     */
+    @Test
+    public void getParrotDataResponse404ParrotSuccess() throws Exception {
+        Parrot testParrot = null;
+
+        boolean testBoolean = false;
+
+        Response testResponse = (Response) testService.getParrotDataResponse(testBoolean, testParrot);
+        assertEquals(404, testResponse.getStatus());
+    }
+
+
 }
