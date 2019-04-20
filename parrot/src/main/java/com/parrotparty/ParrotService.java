@@ -132,10 +132,8 @@ public class ParrotService implements PropertiesLoader {
             hasData = true;
         }
 
-        // create response
-        Response response = getParrotDataResponse(hasData, requestedParrot);
-
-        return response;
+        // get and return response
+        return getParrotDataResponse(hasData, requestedParrot);
     }
 
     /**
@@ -164,10 +162,8 @@ public class ParrotService implements PropertiesLoader {
             hasData = true;
         }
 
-        // create response
-        Response response = getParrotDataResponse(hasData, categories);
-
-        return response;
+        // get and return response
+        return getParrotDataResponse(hasData, categories);
     }
 
 
@@ -182,19 +178,13 @@ public class ParrotService implements PropertiesLoader {
     @Path("/categorized-parrots/{category}")
     @Produces("application/json")
     public Response getJSONForParrotsByCategory(@PathParam("category") String category) {
-
-        mapper = new ObjectMapper();
-        Properties properties = null;
-        String results = "";
-        String parrotJsonUrl = "";
-
-        // default to internal server error response
-        Response response = Response.status(500).build();
+        // set up variables with defaults
         ArrayList<Parrot> requestedCategoryParrots = new ArrayList<Parrot>();
+        boolean hasData = false;
 
         // get the json data at the location specified by the properties file
-        properties = getPartyParrotProperties();
-        parrotJsonUrl = properties.getProperty("parrots.data.url");
+        Properties properties = getPartyParrotProperties();
+        String parrotJsonUrl = properties.getProperty("parrots.data.url");
 
         // access the parrot data as Objects
         List<Parrot> allParrots = getAllTheParrots(parrotJsonUrl);
@@ -206,21 +196,13 @@ public class ParrotService implements PropertiesLoader {
             }
         }
 
-        if (requestedCategoryParrots.size() < 1) {
-            // send a 404 if the requested parrot doesn't exist
-            response = Response.status(404).build();
-        } else {
-            // send the parrot as json if it exists
-            try {
-                results = mapper.writeValueAsString(requestedCategoryParrots);
-                response = Response.status(200).entity(results).build();
-            } catch (JsonProcessingException jsonProcessingException) {
-                logger.error(jsonProcessingException.getMessage());
-            } catch (Exception exception) {
-                logger.error(exception.getMessage());
-            }
+        // check for data
+        if (requestedCategoryParrots.size() > 0) {
+            hasData = true;
         }
-        return response;
+
+        // get and return response
+        return getParrotDataResponse(hasData, requestedCategoryParrots);
     }
 
 
