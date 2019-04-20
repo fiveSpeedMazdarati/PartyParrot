@@ -26,7 +26,6 @@ import java.util.Properties;
 public class ParrotService implements PropertiesLoader {
 
     private ObjectMapper mapper;
-    // todo - can we make the properties a final class variable, pulled out of each method? Or does that not work b/c we need to call loader?
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
@@ -67,10 +66,18 @@ public class ParrotService implements PropertiesLoader {
         return Response.status(200).entity(results).build();
     }
 
-    // todo figure out if this will work
 
+    /**
+     * Creates a json response with the appropriate status for get requests.
+     *
+     * @param haveData whether there is data matching the request
+     * @param data     the data matching the request
+     * @return the parrot data response
+     */
     public Response getParrotDataResponse(boolean haveData, Object data) {
         String results = "";
+
+        mapper = new ObjectMapper();
 
         // default to internal server error response
         Response response = Response.status(500).build();
@@ -102,20 +109,13 @@ public class ParrotService implements PropertiesLoader {
     @Path("/{name}")
     @Produces("application/json")
     public Response getJSONForParrot(@PathParam("name") String name) {
-        // set up variables
-        String results = "";
-        Properties properties = null;
-        String parrotJsonUrl = "";
+        // set up variables with defaults
         Parrot requestedParrot = null;
+        boolean hasData = false;
 
-        mapper = new ObjectMapper();
-
-        // default to internal server error response
-        Response response = Response.status(500).build();
-
-         // get the json data at the location specified by the properties file
-        properties = getPartyParrotProperties();
-        parrotJsonUrl = properties.getProperty("parrots.data.url");
+        // get the json data at the location specified by the properties file
+        Properties properties = getPartyParrotProperties();
+        String parrotJsonUrl = properties.getProperty("parrots.data.url");
 
         // access the parrot data as Objects
         List<Parrot> allParrots = getAllTheParrots(parrotJsonUrl);
@@ -127,23 +127,15 @@ public class ParrotService implements PropertiesLoader {
             }
         }
 
-        // create the response
-        if (requestedParrot == null) {
-            // send a 404 if the requested parrot doesn't exist
-            response = Response.status(404).build();
-        } else {
-            // send the parrot as json if it exists
-            try {
-                results = mapper.writeValueAsString(requestedParrot);
-                response = Response.status(200).entity(results).build();
-            } catch (JsonProcessingException jsonProcessingException) {
-                logger.error(jsonProcessingException.getMessage());
-            } catch (Exception exception) {
-                logger.error(exception.getMessage());
-            }
+        // check for data
+        if (requestedParrot != null) {
+            hasData = true;
         }
-        return response;
 
+        // create response
+        Response response = getParrotDataResponse(hasData, requestedParrot);
+
+        return response;
     }
 
     /**
@@ -155,40 +147,25 @@ public class ParrotService implements PropertiesLoader {
     @Path("/categories")
     @Produces("application/json")
     public Response getCategories() {
-        // set up variables
-        String results = "";
-        Properties properties = null;
-        String parrotJsonUrl = "";
-
-        mapper = new ObjectMapper();
-
-        // default to internal server error response
-        Response response = Response.status(500).build();
+        // set up variables with defaults
+        List<String> categories = new ArrayList<>();
+        boolean hasData = false;
 
         // get the json data at the location specified by the properties file
-        properties = getPartyParrotProperties();
-        parrotJsonUrl = properties.getProperty("parrots.data.url");
+        Properties properties = getPartyParrotProperties();
+        String parrotJsonUrl = properties.getProperty("parrots.data.url");
 
         // get the parrot objects from the json and find their categories
-        List<String> categories = new ArrayList<>();
         List<Parrot> parrots = getAllTheParrots(parrotJsonUrl);
         categories = getAllTheCategories(parrots);
 
-        // create the appropriate response
-        if (categories.size() < 1) {
-            // send a 404 if there are no categories
-            response = Response.status(404).build();
-        } else {
-            // send the categories as json
-            try {
-                results = mapper.writeValueAsString(categories);
-                response = Response.status(200).entity(results).build();
-            } catch (JsonProcessingException jsonProcessingException) {
-                logger.error(jsonProcessingException.getMessage());
-            } catch (Exception exception) {
-                logger.error(exception.getMessage());
-            }
+        // check for data
+        if (categories.size() > 0) {
+            hasData = true;
         }
+
+        // create response
+        Response response = getParrotDataResponse(hasData, categories);
 
         return response;
     }
