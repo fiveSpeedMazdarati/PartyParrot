@@ -82,4 +82,15 @@ public class ParrotServiceTest implements PropertiesLoader {
         assertTrue(testCategories.contains("technology"));
         assertTrue(testCategories.contains("hip"));
     }
+
+    /**
+     * Tests the getAllTheCategories method.
+     *
+     * @throws Exception the exception
+     */
+    @Test
+    public void getParrotByNameSuccess() throws Exception {
+
+
+    }
 }

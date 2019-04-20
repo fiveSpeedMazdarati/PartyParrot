@@ -75,32 +75,32 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th class="pr-3">Verbage</th>
+                        <th class="pr-3">Verb</th>
                         <th>Method</th>
                         <th>Endpoint</th>
                         <th>Description</th>
                     </thead>
                     <tr>
-                        <td>GET</td>
+                        <td class="text-info">GET</td>
                         <td>Get Parrot by entering Parrot's name
                         </td>
-                        <td>/parrot/(parrot name)
+                        <td>/parrots/(parrot name)
                         </td>
                         <td>Accepts name as input and returns attributes for the matched parrot
                         </td>
                     </tr>
                     <tr>
-                        <td>GET</td>
+                        <td class="text-info">GET</td>
                         <td>Get Parrots by entering Parrot category
                         </td>
-                        <td>/category/(category name)
+                        <td>/categories/(category name)
                         </td>
                         <td>Accepts a category and returns all parrots data in that category
                         </td>
                     </tr>
 
                     <tr>
-                        <td>GET</td>
+                        <td class="text-info">GET</td>
                         <td>Get List of Parrot Categories
                         </td>
                         <td>/categories
@@ -110,7 +110,7 @@
                     </tr>
 
                     <tr>
-                        <td>GET</td>
+                        <td class="text-info">GET</td>
                         <td class="mr-2">Get All the Parrots
                         </td>
                         <td>(the base url will take you there!)
@@ -120,10 +120,10 @@
                     </tr>
 
                     <tr>
-                        <td>POST</td>
+                        <td class="text-primary">POST</td>
                         <td>Add a Parrot
                         </td>
-                        <td>/parrots/(name)/(link)/(hd link)/(category)
+                        <td>/new-parrots/(name)/(link)/(hd link)/(category)
                         </td>
                         <td>Contributes to the ever-growing Party Parrot enterprise
                         </td>
@@ -134,7 +134,7 @@
                 <span class="trick" id="name"></span>
                 <section class="mt-5">
                     <h3>Get Parrot By Name</h3>
-                    <p>Example Request: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/Aussie Parrot">/Aussie Parrot</a><small class="pl-2">(Spaces are okay!! We handle that)</small></p>
+                    <p>Example Request: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/Aussie Parrot">http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/Aussie Parrot</a><small class="pl-2">(Spaces are okay!! We handle that)</small></p>
                     <div class="card">
                         <div class="card-body">
                             <code> <br/>
@@ -152,7 +152,7 @@
     <span class="trick" id="category"></span>
     <section class="mt-5">
         <h3>Get Parrot By Category</h3>
-        <p>Example Request: /technology</p>
+        <p>Example Request: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/categories/technology">http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/categories/technology</a></p>
         <div class="card">
             <div class="card-body">
                 <code> <br/>
@@ -185,7 +185,7 @@
     <span class="trick" id="categories"></span>
     <section class="mt-5">
         <h3>Get Possible Parrot Categories</h3>
-        <p>Request: /categories</p>
+        <p>Request: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/categories">http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/categories</a></p>
         <div class="card">
             <div class="card-body">
                 <code> <br/>
@@ -196,7 +196,7 @@
                      <span class="pl-4">"food",</span><br/>
                      <span class="pl-4">"holiday",</span><br/>
                      <span class="pl-4">"steve",</span><br/>
-                     <span class="pl-4">"bernardo",</span><br/>
+                     <span class="pl-4">"bernardo"</span><br/>
                      ]
                 </code>
             </div>
@@ -206,7 +206,7 @@
     <span class="trick" id="all"></span>
     <section class="mt-5">
         <h3>Get All Parrots!</h3>
-        <p>Request: /parrots</p>
+        <p>Request: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots">/parrots</a></p>
         <div class="card">
             <div class="card-body">
                 <code> <br/>
@@ -250,12 +250,8 @@
         <span class="trick" id="add"></span>
         <section class="mt-5">
             <h3>Add a Parrot!</h3>
-                <p>Example Request: /Doge<br/>
-                <span class="ml-5">  /https://cultofthepartyparrot.com/guests/hd/dogeparrot.gif</span><br/>
-                <span class="ml-5">  /https://cultofthepartyparrot.com/guests/hd/dogeparrot.gif</span><br/>
-                <span class="ml-5">  /guests</span><br/>
 
-            <p>Or use this handy form!</p>
+            <p>Use this handy form! (or Postman if you hate easy things)</p>
             <div class="card text-white bg-dark col-sm-6 mt-3">
             <div class="card-body">
             <form enctype="application/x-www-form-urlencoded" action="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/parrots/" method="POST">
@@ -272,7 +268,7 @@
                 <label class="mr-2">Category:</label><input name="category"><br />
             </div>
                 <span class="float-right">
-                <input type="submit" value="Add Parrot" class="btn btn-outline-info">
+                <input type="submit" value="Add Parrot" class="btn btn-info">
                 </span>
             </form>
             </div>

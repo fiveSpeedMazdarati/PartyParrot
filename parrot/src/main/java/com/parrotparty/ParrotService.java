@@ -177,7 +177,7 @@ public class ParrotService implements PropertiesLoader {
      */
     @GET
     //The Java method will produce content identified by the MIME Media type "text/plain"
-    @Path("/categorized-parrots/{category}")
+    @Path("/categories/{category}")
     @Produces("application/json")
     public Response getJSONForParrotsByCategory(@PathParam("category") String category) {
 
@@ -364,4 +364,5 @@ public class ParrotService implements PropertiesLoader {
 
         return partyParrotProperties;
     }
+
 }
