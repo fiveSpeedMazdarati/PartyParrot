@@ -7,6 +7,11 @@
     max-width: 35%;
 }
 
+#gif {
+    width: 1.5em;
+    height: 1.5em;
+}
+
 .tm {
    margin-top: 6.5em;
 }

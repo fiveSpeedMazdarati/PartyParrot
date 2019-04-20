@@ -66,10 +66,10 @@
                 <span class="trick" id="top"></span>
                     <div class="col-md-12">
                         <h4 class=text-center">The Preeminent Party Parrot API on the ENTIRE internet!</h4>
-                        <img class="col-md-6 offset-3" id="parrotsLarge" src="parrotsLarge.jpg" alt="parrots"/>
+                        <img class="mt-2 col-md-6 offset-3" id="parrotsLarge" src="parrotsLarge.jpg" alt="parrots"/>
                     </div>
                 <br/><br/>
-                <h4>Method URLs</h4>
+                <h4>Method URLs<img class="pb-2 pl-2" alt="parrot" id="gif" src="og.gif"/><h4></h4>
                 <p>Base: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots">http://52.14.41.110:8080/PartyParrot4Ever/services/parrots</a></p>
 
                 <table class="table table-striped">
@@ -206,7 +206,7 @@
     <span class="trick" id="all"></span>
     <section class="mt-5">
         <h3>Get All Parrots!</h3>
-        <p>Request: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots">/parrots</a></p>
+        <p>Request: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots">http://52.14.41.110:8080/PartyParrot4Ever/services/parrots</a></p>
         <div class="card">
             <div class="card-body">
                 <code> <br/>
