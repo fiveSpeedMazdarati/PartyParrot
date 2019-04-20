@@ -29,11 +29,12 @@ public class ParrotService implements PropertiesLoader {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-    /**
+    /* **************************** ORIGINAL ******************************************************
      * Processes GET requests for all the Party Parrots in the collection and returns the data as json.
      *
      * @return a response with json data on all the Party Parrots in the collection
      */
+    /* **************************** ORIGINAL ******************************************************
     @GET
     @Produces("application/json")
     public Response getJSONForParrots() {
@@ -65,7 +66,46 @@ public class ParrotService implements PropertiesLoader {
 
         return Response.status(200).entity(results).build();
     }
+    */
 
+    /**
+     * Processes GET requests for all the Party Parrots in the collection and returns the data as json.
+     *
+     * @return a response with json data on all the Party Parrots in the collection
+     */
+    @GET
+    @Produces("application/json")
+    public Response getJSONForParrots() {
+        // set up variables with defaults
+        boolean hasData = false;
+        Response response = Response.status(500).build();
+
+        mapper = new ObjectMapper();
+        Properties parrotProperties = getPartyParrotProperties();
+
+        try {
+
+            // Convert JSON string from file to Object
+            Parrot[] result = mapper.readValue(new File(parrotProperties.getProperty("parrots.data.url")), Parrot[].class);
+
+            if (result.length > 0) {
+                hasData = true;
+            }
+
+            response = getParrotDataResponse(hasData, result);
+            logger.info(result);
+        } catch (JsonGenerationException e) {
+            logger.error(e.getMessage());
+        } catch (JsonMappingException e) {
+            logger.error(e.getMessage());
+        } catch (IOException e) {
+            logger.error(e.getMessage());
+        } catch (Exception e){
+            logger.error(e.getMessage());
+        }
+
+        return response;
+    }
 
     /**
      * Creates a json response with the appropriate status for get requests.
@@ -175,7 +215,7 @@ public class ParrotService implements PropertiesLoader {
      */
     @GET
     //The Java method will produce content identified by the MIME Media type "text/plain"
-    @Path("/categorized-parrots/{category}")
+    @Path("/categories/{category}")
     @Produces("application/json")
     public Response getJSONForParrotsByCategory(@PathParam("category") String category) {
         // set up variables with defaults
