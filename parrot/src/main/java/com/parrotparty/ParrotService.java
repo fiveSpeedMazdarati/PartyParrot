@@ -388,4 +388,5 @@ public class ParrotService implements PropertiesLoader {
 
         return partyParrotProperties;
     }
+
 }

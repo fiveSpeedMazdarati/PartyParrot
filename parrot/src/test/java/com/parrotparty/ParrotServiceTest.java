@@ -44,7 +44,7 @@ public class ParrotServiceTest implements PropertiesLoader {
             logger.debug("An IOException is occurring while attempting to load the properties file.");
         } catch (Exception exception) {
             logger.debug("An Exception is occurring while attempting to load the "
-            + "properties file.");
+                    + "properties file.");
         }
 
         parrotJsonUrl = testProperties.getProperty("parrots.data.url");

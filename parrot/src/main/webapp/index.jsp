@@ -9,7 +9,7 @@
 <div class="container">
     <div class="container-fluid">
     <div class="fixed-top">
-        <img src="parrotbanner.jpg" alt="banner" style="width: 100%">
+        <img id="banner" src="parrotbanner.jpg" alt="banner" style="width: 100%">
     </div>
     </div>
 </div>
@@ -21,8 +21,13 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
+                    <a href="#top">
+                        Party Parrot 4 Ever
+                    </a>
+                </li>
+                <li>
                     <a href="https://cultofthepartyparrot.com" target="_blank">
-                        Party Parrots
+                        Party Parrots Website
                     </a>
                 </li>
                 <li>
@@ -41,6 +46,9 @@
                     <a href="#add">Add A Parrot</a>
                 </li>
                 <li>
+                    <a href="/JavaDoc" target="_blank">Documentation</a>
+                </li>
+                <li>
                     <a href="#donate">Donate</a>
                 </li>
 
@@ -53,40 +61,46 @@
             <div class="container-fluid">
 <%--
                 <div class="row">
---%>
-                    <div class="col-md-12">
-                        <h3>The Preeminent Party Parrot API on the ENTIRE internets!</h3>
 
+--%>
+                <span class="trick" id="top"></span>
+                    <div class="col-md-12">
+                        <h4 class=text-center">The Preeminent Party Parrot API on the ENTIRE internet!</h4>
+                        <img class="mt-2 col-md-6 offset-3" id="parrotsLarge" src="parrotsLarge.jpg" alt="parrots"/>
                     </div>
                 <br/><br/>
-                <h3>Method URLs</h3>
-    <p>Base: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots">http://52.14.41.110:8080/PartyParrot4Ever/services/parrots</a></p>
+                <h4>Method URLs<img class="pb-2 pl-2" alt="parrot" id="gif" src="og.gif"/><h4></h4>
+                <p>Base: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots">http://52.14.41.110:8080/PartyParrot4Ever/services/parrots</a></p>
 
                 <table class="table table-striped">
                     <thead>
                     <tr>
+                        <th class="pr-3">Verb</th>
                         <th>Method</th>
                         <th>Endpoint</th>
                         <th>Description</th>
                     </thead>
                     <tr>
+                        <td class="text-info">GET</td>
                         <td>Get Parrot by entering Parrot's name
                         </td>
-                        <td>/parrot/(parrot name)
+                        <td>/parrots/(parrot name)
                         </td>
                         <td>Accepts name as input and returns attributes for the matched parrot
                         </td>
                     </tr>
                     <tr>
+                        <td class="text-info">GET</td>
                         <td>Get Parrots by entering Parrot category
                         </td>
-                        <td>/category/(category name)
+                        <td>/categories/(category name)
                         </td>
                         <td>Accepts a category and returns all parrots data in that category
                         </td>
                     </tr>
 
                     <tr>
+                        <td class="text-info">GET</td>
                         <td>Get List of Parrot Categories
                         </td>
                         <td>/categories
@@ -96,6 +110,7 @@
                     </tr>
 
                     <tr>
+                        <td class="text-info">GET</td>
                         <td class="mr-2">Get All the Parrots
                         </td>
                         <td>(the base url will take you there!)
@@ -105,9 +120,10 @@
                     </tr>
 
                     <tr>
+                        <td class="text-primary">POST</td>
                         <td>Add a Parrot
                         </td>
-                        <td>/parrots/(name)/(link)/(hd link)/(category)
+                        <td>/new-parrots/(name)/(link)/(hd link)/(category)
                         </td>
                         <td>Contributes to the ever-growing Party Parrot enterprise
                         </td>
@@ -115,10 +131,10 @@
 
 
                 </table>
-
-                <section class="mt-5" id="name">
+                <span class="trick" id="name"></span>
+                <section class="mt-5">
                     <h3>Get Parrot By Name</h3>
-                    <p>Example Request: /Aussie Parrot<small class="pl-2">(Spaces are okay!! We handle that)</small></p>
+                    <p>Example Request: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/Aussie Parrot">http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/Aussie Parrot</a><small class="pl-2">(Spaces are okay!! We handle that)</small></p>
                     <div class="card">
                         <div class="card-body">
                             <code> <br/>
@@ -133,10 +149,10 @@
                         </div>
                     </div>
                 </section>
-
-    <section class="mt-5" id="category">
+    <span class="trick" id="category"></span>
+    <section class="mt-5">
         <h3>Get Parrot By Category</h3>
-        <p>Example Request: /technology</p>
+        <p>Example Request: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/categories/technology">http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/categories/technology</a></p>
         <div class="card">
             <div class="card-body">
                 <code> <br/>
@@ -166,10 +182,10 @@
             </div>
         </div>
     </section>
-
-    <section class="mt-5" id="categories">
+    <span class="trick" id="categories"></span>
+    <section class="mt-5">
         <h3>Get Possible Parrot Categories</h3>
-        <p>Request: /categories</p>
+        <p>Request: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/categories">http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/categories</a></p>
         <div class="card">
             <div class="card-body">
                 <code> <br/>
@@ -180,17 +196,17 @@
                      <span class="pl-4">"food",</span><br/>
                      <span class="pl-4">"holiday",</span><br/>
                      <span class="pl-4">"steve",</span><br/>
-                     <span class="pl-4">"bernardo",</span><br/>
+                     <span class="pl-4">"bernardo"</span><br/>
                      ]
                 </code>
             </div>
         </div>
     </section>
 
-
-    <section class="mt-5" id="all">
+    <span class="trick" id="all"></span>
+    <section class="mt-5">
         <h3>Get All Parrots!</h3>
-        <p>Request: /parrots</p>
+        <p>Request: <a href="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots">http://52.14.41.110:8080/PartyParrot4Ever/services/parrots</a></p>
         <div class="card">
             <div class="card-body">
                 <code> <br/>
@@ -231,32 +247,28 @@
             </div>
         </div>
         <!-- /#page-content-wrapper -->
-
-        <section class="mt-5" id="add">
+        <span class="trick" id="add"></span>
+        <section class="mt-5">
             <h3>Add a Parrot!</h3>
-            <p>Example Request: /Doge<br/>
-                <span class="ml-5">  /https://cultofthepartyparrot.com/guests/hd/dogeparrot.gif</span><br/>
-                <span class="ml-5">  /https://cultofthepartyparrot.com/guests/hd/dogeparrot.gif</span><br/>
-                <span class="ml-5">  /guests</span><br/>
 
-            <p>Or use this handy form!</p>
+            <p>Use this handy form! (or Postman if you hate easy things)</p>
             <div class="card text-white bg-dark col-sm-6 mt-3">
             <div class="card-body">
             <form enctype="application/x-www-form-urlencoded" action="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/parrots/" method="POST">
             <div class="form-group">
-                <label class="mr-3">Name: </label><input name="name"/><br />
+                <label class="mr-4">Name:&nbsp; </label><input name="name"/><br />
             </div>
             <div class="form-group">
-                <label class="mr-3">Link: </label><input name="link"><br />
+                <label class="mr-3">Link:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input name="link"><br />
             </div>
             <div class="form-group">
                 <label class="mr-3">HD Link:</label><input name="hdLink"><br />
             </div>
             <div class="form-group">
-                <label class="mr-3">Category:</label><input name="category"><br />
+                <label class="mr-2">Category:</label><input name="category"><br />
             </div>
                 <span class="float-right">
-                <input type="submit" value="Add Parrot" class="btn btn-outline-info">
+                <input type="submit" value="Add Parrot" class="btn btn-info">
                 </span>
             </form>
             </div>
@@ -264,7 +276,8 @@
 
         </section>
 <br/><br/>
-        <section id="donate mt-5">
+        <span class="trick" id="donate"></span>
+        <section class="mt-5">
 
             <h3>Donate to keep the Parrots Partying!</h3>
             <br/>

@@ -1,10 +1,19 @@
-img {
+#banner {
     width: 100%;
-    height: 7em;
+    height: 6.5em;
+}
+
+#parrotsLarge {
+    max-width: 35%;
+}
+
+#gif {
+    width: 1.5em;
+    height: 1.5em;
 }
 
 .tm {
-   margin-top: 7em;
+   margin-top: 6.5em;
 }
 
 /*!
@@ -28,16 +37,16 @@ body {
 }
 
 #wrapper.toggled {
-    padding-left: 250px;
+    padding-left: 200px;
 }
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 250px;
+    left: 200px;
     width: 0;
     height: 100%;
-    margin-left: -250px;
+    margin-left: -200px;
     overflow-y: auto;
     background: #000;
     -webkit-transition: all 0.5s ease;
@@ -48,18 +57,29 @@ body {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: 200px;
 }
 
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 10px;
+    padding: 2px;
 }
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -250px;
+    margin-right: -200px;
+}
+
+#wrapper.container-fluid {
+    padding: 6px;
+
+}
+
+.trick {
+    margin-top: -8em;
+    padding-bottom: 8em;
+    display:block;
 }
 
 /* Sidebar Styles */
@@ -67,7 +87,7 @@ body {
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 200px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -82,6 +102,8 @@ body {
     display: block;
     text-decoration: none;
     color: #999999;
+    font-size: 15px;
+    margin-bottom: .5em;
 }
 
 .sidebar-nav li a:hover {
@@ -98,7 +120,7 @@ body {
 .sidebar-nav > .sidebar-brand {
     height: 65px;
     font-size: 18px;
-    line-height: 60px;
+    line-height: 70px;
 }
 
 .sidebar-nav > .sidebar-brand a {
@@ -112,7 +134,7 @@ body {
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 250px;
+        padding-left: 200px;
     }
 
     #wrapper.toggled {
@@ -120,7 +142,7 @@ body {
     }
 
     #sidebar-wrapper {
-        width: 250px;
+        width: 200px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
