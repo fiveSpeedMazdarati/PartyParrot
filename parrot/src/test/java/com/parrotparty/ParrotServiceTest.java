@@ -26,7 +26,6 @@ public class ParrotServiceTest implements PropertiesLoader {
     String parrotJsonUrl;
 
     private final Logger logger = LogManager.getLogger(this.getClass());
-    // ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console. Set system property 'log4j2.debug' to show Log4j2 internal initialization logging.
 
     /**
      * Populates instance variables in order to set up for tests.
@@ -85,7 +84,22 @@ public class ParrotServiceTest implements PropertiesLoader {
     }
 
     /**
+     *  Tests the getParrotJsonUrl method.
+     *
+     * @throws Exception the exception
+     */
+    @Test
+    public void getParrotJsonUrlSuccess() throws Exception {
+        // should get the real url, not the test one
+        String testUrl = testService.getParrotJsonUrl();
+
+        assertEquals("/var/lib/parrot-service/stuff.json", testUrl);
+    }
+
+    /**
      * Tests the ability of getParrotDataResponse to produce a status 200 response for a list of parrots.
+     *
+     * @throws Exception the exception
      */
     @Test
     public void getParrotDataResponse200ParrotsSuccess() throws Exception {
@@ -100,6 +114,8 @@ public class ParrotServiceTest implements PropertiesLoader {
 
     /**
      * Tests the ability of getParrotDataResponse to produce a status 404 response for an empty list of parrots.
+     *
+     * @throws Exception the exception
      */
     @Test
     public void getParrotDataResponse404ParrotsSuccess() throws Exception {
@@ -111,6 +127,8 @@ public class ParrotServiceTest implements PropertiesLoader {
 
     /**
      * Tests the ability of getParrotDataResponse to produce a status 200 response for a list of categories.
+     *
+     * @throws Exception the exception
      */
     @Test
     public void getParrotDataResponse200CategoriesSuccess() throws Exception {
@@ -127,6 +145,8 @@ public class ParrotServiceTest implements PropertiesLoader {
 
     /**
      * Tests the ability of getParrotDataResponse to produce a status 404 response for an empty list of categories.
+     *
+     * @throws Exception the exception
      */
     @Test
     public void getParrotDataResponse404CategoriesSuccess() throws Exception {
@@ -141,6 +161,8 @@ public class ParrotServiceTest implements PropertiesLoader {
 
     /**
      * Tests the ability of getParrotDataResponse to produce a status 200 response for a single parrot
+     *
+     * @throws Exception the exception
      */
     @Test
     public void getParrotDataResponse200ParrotSuccess() throws Exception {
@@ -157,6 +179,8 @@ public class ParrotServiceTest implements PropertiesLoader {
 
     /**
      * Tests the ability of getParrotDataResponse to produce a status 404 response for null parrot.
+     *
+     * @throws Exception the exception
      */
     @Test
     public void getParrotDataResponse404ParrotSuccess() throws Exception {

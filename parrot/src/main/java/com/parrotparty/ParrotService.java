@@ -107,37 +107,6 @@ public class ParrotService implements PropertiesLoader {
         return response;
     }
 
-    /**
-     * Creates a json response with the appropriate status for get requests.
-     *
-     * @param haveData whether there is data matching the request
-     * @param data     the data matching the request
-     * @return the parrot data response
-     */
-    public Response getParrotDataResponse(boolean haveData, Object data) {
-        String results = "";
-
-        mapper = new ObjectMapper();
-
-        // default to internal server error response
-        Response response = Response.status(500).build();
-
-        if (!haveData) {
-            response = Response.status(404).build();
-        } else {
-            // send the parrot as json if it exists
-            try {
-                results = mapper.writeValueAsString(data);
-                response = Response.status(200).entity(results).build();
-            } catch (JsonProcessingException jsonProcessingException) {
-                logger.error(jsonProcessingException.getMessage());
-            } catch (Exception exception) {
-                logger.error(exception.getMessage());
-            }
-        }
-
-        return response;
-    }
 
     /**
      * Processes GET requests for a single Party Parrot, searched by name, and returns the data as json.
@@ -153,9 +122,8 @@ public class ParrotService implements PropertiesLoader {
         Parrot requestedParrot = null;
         boolean hasData = false;
 
-        // get the json data at the location specified by the properties file
-        Properties properties = getPartyParrotProperties();
-        String parrotJsonUrl = properties.getProperty("parrots.data.url");
+        // get the url of the parrot data
+        String parrotJsonUrl = getParrotJsonUrl();
 
         // access the parrot data as Objects
         List<Parrot> allParrots = getAllTheParrots(parrotJsonUrl);
@@ -190,8 +158,7 @@ public class ParrotService implements PropertiesLoader {
         boolean hasData = false;
 
         // get the json data at the location specified by the properties file
-        Properties properties = getPartyParrotProperties();
-        String parrotJsonUrl = properties.getProperty("parrots.data.url");
+        String parrotJsonUrl = getParrotJsonUrl();
 
         // get the parrot objects from the json and find their categories
         List<Parrot> parrots = getAllTheParrots(parrotJsonUrl);
@@ -223,8 +190,7 @@ public class ParrotService implements PropertiesLoader {
         boolean hasData = false;
 
         // get the json data at the location specified by the properties file
-        Properties properties = getPartyParrotProperties();
-        String parrotJsonUrl = properties.getProperty("parrots.data.url");
+        String parrotJsonUrl = getParrotJsonUrl();
 
         // access the parrot data as Objects
         List<Parrot> allParrots = getAllTheParrots(parrotJsonUrl);
@@ -287,6 +253,38 @@ public class ParrotService implements PropertiesLoader {
     }
 
     /**
+     * Creates a json response with the appropriate status for get requests.
+     *
+     * @param haveData whether there is data matching the request
+     * @param data     the data matching the request
+     * @return the parrot data response
+     */
+    public Response getParrotDataResponse(boolean haveData, Object data) {
+        String results = "";
+
+        mapper = new ObjectMapper();
+
+        // default to internal server error response
+        Response response = Response.status(500).build();
+
+        if (!haveData) {
+            response = Response.status(404).build();
+        } else {
+            // send the parrot as json if it exists
+            try {
+                results = mapper.writeValueAsString(data);
+                response = Response.status(200).entity(results).build();
+            } catch (JsonProcessingException jsonProcessingException) {
+                logger.error(jsonProcessingException.getMessage());
+            } catch (Exception exception) {
+                logger.error(exception.getMessage());
+            }
+        }
+
+        return response;
+    }
+
+    /**
      * Utility method to create a parrot and send back a response
      * @param parrot the parrot to add to the collection
      * @return the response to send to the web service consumer
@@ -295,10 +293,9 @@ public class ParrotService implements PropertiesLoader {
         String parrotJsonUrl = "";
 
         Response response = Response.noContent().build();
-        Properties partyParrotProperties = getPartyParrotProperties();
 
         // get the json data at the location specified by the properties file
-        parrotJsonUrl = partyParrotProperties.getProperty("parrots.data.url"); // todo (?) could use var in try block too
+        parrotJsonUrl = getParrotJsonUrl();
 
         List<Parrot> allTheParrots = getAllTheParrots(parrotJsonUrl);
 
@@ -307,7 +304,7 @@ public class ParrotService implements PropertiesLoader {
         mapper = new ObjectMapper();
 
         try {
-            mapper.writeValue(new File(partyParrotProperties.getProperty("parrots.data.url")), allTheParrots);
+            mapper.writeValue(new File(parrotJsonUrl), allTheParrots);
             // return a success code and the number of parrots added
             response = Response.status(200).entity("1").build();
         } catch(JsonGenerationException json) {
@@ -387,6 +384,16 @@ public class ParrotService implements PropertiesLoader {
         }
 
         return partyParrotProperties;
+    }
+
+    /**
+     * Gets the url of the file with the parrot data
+     */
+    public String getParrotJsonUrl() {
+        String parrotJsonUrl = "";
+        Properties properties = getPartyParrotProperties();
+        parrotJsonUrl = properties.getProperty("parrots.data.url");
+        return parrotJsonUrl;
     }
 
 }
