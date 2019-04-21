@@ -337,6 +337,8 @@ public class ParrotService implements PropertiesLoader {
 
     /**
      * Gets the url of the file with the parrot data
+     *
+     * @return string with the url of the file with the parrot data
      */
     public String getParrotJsonUrl() {
         String parrotJsonUrl = "";
