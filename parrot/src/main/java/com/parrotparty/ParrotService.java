@@ -29,45 +29,6 @@ public class ParrotService implements PropertiesLoader {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-    /* **************************** ORIGINAL ******************************************************
-     * Processes GET requests for all the Party Parrots in the collection and returns the data as json.
-     *
-     * @return a response with json data on all the Party Parrots in the collection
-     */
-    /* **************************** ORIGINAL ******************************************************
-    @GET
-    @Produces("application/json")
-    public Response getJSONForParrots() {
-
-        mapper = new ObjectMapper();
-        Properties parrotProperties = getPartyParrotProperties();
-
-       String results = "";
-        try {
-
-            // Convert JSON string from file to Object
-            //might not need [] when returning single result?
-            Parrot[] result = mapper.readValue(new File(parrotProperties.getProperty("parrots.data.url")), Parrot[].class);
-
-            //could also use file but I couldn't get relative path out of it
-            //Parrot[] result = mapper.readValue(new File("/home/klyke/student/PartyParrot/parrot/src/main/webapp/parrots.json"), Parrot[].class);
-            results = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(result);
-
-            logger.info(result);
-        } catch (JsonGenerationException e) {
-            logger.error(e.getMessage());
-        } catch (JsonMappingException e) {
-            logger.error(e.getMessage());
-        } catch (IOException e) {
-            logger.error(e.getMessage());
-        } catch (Exception e){
-            logger.error(e.getMessage());
-        }
-
-        return Response.status(200).entity(results).build();
-    }
-    */
-
     /**
      * Processes GET requests for all the Party Parrots in the collection and returns the data as json.
      *
@@ -77,34 +38,22 @@ public class ParrotService implements PropertiesLoader {
     @Produces("application/json")
     public Response getJSONForParrots() {
         // set up variables with defaults
+        List<Parrot> allParrots = new ArrayList<>();
         boolean hasData = false;
-        Response response = Response.status(500).build();
 
-        mapper = new ObjectMapper();
-        Properties parrotProperties = getPartyParrotProperties();
+        // get the url of the parrot data
+        String parrotJsonUrl = getParrotJsonUrl();
 
-        try {
+        // access the parrot data as Objects
+        allParrots = getAllTheParrots(parrotJsonUrl);
 
-            // Convert JSON string from file to Object
-            Parrot[] result = mapper.readValue(new File(parrotProperties.getProperty("parrots.data.url")), Parrot[].class);
-
-            if (result.length > 0) {
-                hasData = true;
-            }
-
-            response = getParrotDataResponse(hasData, result);
-            logger.info(result);
-        } catch (JsonGenerationException e) {
-            logger.error(e.getMessage());
-        } catch (JsonMappingException e) {
-            logger.error(e.getMessage());
-        } catch (IOException e) {
-            logger.error(e.getMessage());
-        } catch (Exception e){
-            logger.error(e.getMessage());
+        // check for data
+        if (allParrots.size() > 0) {
+            hasData = true;
         }
 
-        return response;
+        // get and return response
+        return getParrotDataResponse(hasData, allParrots);
     }
 
 
