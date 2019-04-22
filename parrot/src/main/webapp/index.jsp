@@ -84,7 +84,7 @@
                         <td class="text-info">GET</td>
                         <td>Get Parrot by entering Parrot's name
                         </td>
-                        <td>/parrots/(parrot name)
+                        <td>/(parrot name)
                         </td>
                         <td>Accepts name as input and returns attributes for the matched parrot
                         </td>
@@ -251,7 +251,7 @@
         <section class="mt-5">
             <h3>Add a Parrot!</h3>
 
-            <p>Use this handy form! (or Postman if you hate easy things)</p>
+            <p>Use this handy form!</p>
             <div class="card text-white bg-dark col-sm-6 mt-3">
             <div class="card-body">
             <form enctype="application/x-www-form-urlencoded" action="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/new-parrots/" method="POST">
@@ -273,7 +273,34 @@
             </form>
             </div>
         </div>
+            <br/>
+            <br/>
+            <div class="card p-3 bg-light">
+                <div class="card-header"><h5>Want a fancy form on your website, too? </h5></div>
 
+                <div class="card-body">
+                <div class="card-text">
+                    <p>Just copy and paste into your HTML</p><hr/>
+                    &lt;<span style="color:blue;" class="mr-2">form</span><span style="color:green;">enctype</span>="application/x-www-form-urlencoded"
+                    <br/> <span class="ml-5"></span><span style="color:green;"> action</span>="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/new-parrots/"
+                    <br/> <span class="ml-5"></span><span style="color:green;">method</span>="POST"&gt;
+                    <br/>
+                    &lt;<span style="color:blue;">label</span>&gt;Name: &lt;/<span style="color:blue;">label</span>&gt;
+                    &lt;<span style="color:blue;">input</span> <span style="color:green;">name</span>="name"/&gt;&lt;<span style="color:blue;">br </span>/&gt;<br/>
+                    &lt;<span style="color:blue;">label</span>&gt;Link: &lt;/<span style="color:blue;">label</span>&gt;
+                    &lt;<span style="color:blue;">input</span> <span style="color:green;">name</span>="link"/&gt;&lt;<span style="color:blue;">br </span>/&gt;<br/>
+                    &lt;<span style="color:blue;">label</span>&gt;HD Link: &lt;/<span style="color:blue;">label</span>&gt;
+                    &lt;<span style="color:blue;">input</span> <span style="color:green;">name</span>="hdLink"/&gt;&lt;<span style="color:blue;">br </span>/&gt;<br/>
+                    &lt;<span style="color:blue;">label</span>&gt;Category: &lt;/<span style="color:blue;">label</span>&gt;
+                    &lt;<span style="color:blue;">input</span> <span style="color:green;">name</span>="category"/&gt;&lt;<span style="color:blue;">br </span>/&gt;<br/>
+
+                    &lt;<span style="color:blue;">input</span> <span style="color:green;">type</span>="submit" <span style="color:green;">value</span>="Add Parrot"&gt;<br/>
+                    &lt;/<span style="color:blue;">form</span>&gt;
+
+
+            </div>
+            </div>
+            </div>
         </section>
 <br/><br/>
         <span class="trick" id="donate"></span>

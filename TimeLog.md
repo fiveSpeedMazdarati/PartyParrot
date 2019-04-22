@@ -16,4 +16,6 @@
 | 4/17/19 | created user guide | 2 | Kelly |  |
 | 4/18/19 | refactored code to make testable methods, created tests, changed all exception handling to logging, added javadoc comments where missing | 6 | Heidi |  |
 | 4/20/19 | refactored code to get rid of duplicate response creation/exception handling | 3.5 | Heidi | learned about using Object as a parameter type; challenged by resolving git conflict  |
+| 4/20/19| updated user guide, fixed formatting, reviewed refactored code | 2 | Kelly | |
 | 4/21/19 | a little more refactoring, re-generating html javadocs and test results | 1 | Heidi | obstacle - not sure I'm using postman right, so I'm not sure I'm correctly testing the post service in the local environment  |
+| 4/22/19| fixed get by category on aws, added form html to user guide | 2 | Kelly |
