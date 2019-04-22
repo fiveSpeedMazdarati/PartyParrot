@@ -135,27 +135,30 @@ public class ParrotService implements PropertiesLoader {
     @Produces("application/json")
     public Response getJSONForParrotsByCategory(@PathParam("category") String category) {
         // set up variables with defaults
-        ArrayList<Parrot> requestedCategoryParrots = new ArrayList<Parrot>();
+       // List<Parrot> requestedCategoryParrots = new ArrayList<Parrot>();
         boolean hasData = false;
 
         // get the json data at the location specified by the properties file
         String parrotJsonUrl = getParrotJsonUrl();
+       // String parrotJsonUrl = "http://52.14.41.110:8080/PartyParrot4Ever/services/parrots";
 
         // access the parrot data as Objects
         List<Parrot> allParrots = getAllTheParrots(parrotJsonUrl);
+        //requestedCategoryParrots = getAllTheParrots(parrotJsonUrl);
+        List<Parrot> requestedCategoryParrots = new ArrayList<Parrot>();
 
         // see if category exists
         for (Parrot parrot : allParrots) {
-            if (parrot.getCategory().equals(category)) {
+            String parrotCategory = parrot.getCategory();
+            if (category.equals(parrotCategory)) {
                 requestedCategoryParrots.add(parrot);
             }
         }
 
         // check for data
-        if (requestedCategoryParrots.size() > 0) {
+       if (requestedCategoryParrots.size() > 0) {
             hasData = true;
-        }
-
+       }
         // get and return response
         return getParrotDataResponse(hasData, requestedCategoryParrots);
     }
