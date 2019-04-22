@@ -46,7 +46,7 @@
                     <a href="#add">Add A Parrot</a>
                 </li>
                 <li>
-                    <a href="/JavaDoc" target="_blank">Documentation</a>
+                    <a href="/PartyParrot4Ever/JavaDoc" target="_blank">Documentation</a>
                 </li>
                 <li>
                     <a href="#donate">Donate</a>
