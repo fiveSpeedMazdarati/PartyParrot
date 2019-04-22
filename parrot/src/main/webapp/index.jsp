@@ -254,7 +254,7 @@
             <p>Use this handy form! (or Postman if you hate easy things)</p>
             <div class="card text-white bg-dark col-sm-6 mt-3">
             <div class="card-body">
-            <form enctype="application/x-www-form-urlencoded" action="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/parrots/" method="POST">
+            <form enctype="application/x-www-form-urlencoded" action="http://52.14.41.110:8080/PartyParrot4Ever/services/parrots/new-parrots/" method="POST">
             <div class="form-group">
                 <label class="mr-4">Name:&nbsp; </label><input name="name"/><br />
             </div>
